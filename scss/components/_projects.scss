@@ -1,0 +1,40 @@
+#projects {
+    background-color: rgb(110, 110, 110);
+    height: $sectionHeight;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "directory directory dashboard dashboard gallery gallery"
+        "stylesheet stylesheet stylesheet form form form";
+
+    img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .project {
+        margin: auto;
+    }
+}
+
+.directory {
+ grid-area: directory;
+}
+
+.dashboard {
+    grid-area: dashboard;
+}
+
+.gallery {
+    grid-area: gallery;
+}
+
+.stylesheet {
+    grid-area: stylesheet;
+}
+
+.form {
+    grid-area: form;
+}

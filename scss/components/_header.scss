@@ -1,0 +1,41 @@
+header {
+    background-image: url("https://placeimg.com/1200/600/tech/grayscale");
+    height: $sectionHeight;
+
+    h1 {
+        text-align: center;
+        margin: 100px 0 0 0;
+        color: rgba(175, 157, 0, 1);
+        font-size: 5rem;
+    }
+    h2 {
+        text-align: center;
+        color: rgba(175, 157, 0, 1);
+    }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    color: white;
+    ul {
+        list-style-type: none;
+        display: flex;
+        margin-right: $edgeGap;
+        padding: 0;
+    }
+    span {
+        flex: 1;
+        margin-left: $edgeGap;
+    }
+    a {
+        color: white;
+    }
+}
+
+li {
+    padding-left: 15px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
