@@ -1,29 +1,56 @@
 header {
-    background-image: url("https://placeimg.com/1200/600/tech/grayscale");
+    background-color: rgb(220, 220 , 220);
     height: $sectionHeight;
-
     h1 {
         text-align: center;
-        margin: 100px 0 0 0;
+        padding: 120px 0 0 0;
+        margin: 0;
         color: rgba(175, 157, 0, 1);
         font-size: 5rem;
+        font-family: 'Inconsolata', monospace;
+        position: relative;
+        z-index: 1000;
     }
-    h2 {
+
+    p {
         text-align: center;
-        color: rgba(175, 157, 0, 1);
+        font-size: 1.5rem;
+        position: relative;
+        z-index: 1000;
+    }
+    #img {
+        &1 {
+            left: 300px;
+            position: relative;
+            top: -250px;
+            height: 400px;
+            width: 300px;
+            transition: top linear 2s;
+        }
+        &2 {
+            left: 400px;
+            position: relative;
+            top: -250px;
+            height: 400px;
+            width: 300px;
+        }
     }
 }
 
 nav {
+    background-color: transparent;
     display: flex;
     align-items: center;
     height: 50px;
     color: white;
+    position: fixed;
+    top: 5px;
+    width: 100%;
+    max-width: $body-max-width;
+    z-index: 2000;
     ul {
         list-style-type: none;
-        display: flex;
         margin-right: $edgeGap;
-        padding: 0;
     }
     span {
         flex: 1;
@@ -31,11 +58,15 @@ nav {
     }
     a {
         color: white;
+        background-color: rgba(175, 157, 0, 0.6);
+        margin-left: 10px;
+        text-decoration: none;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        border: solid 1px transparent;
+        &:hover {
+            background-color:rgba(175, 157, 0, 1);
+            border: solid 1px white;
+        }
     }
-}
-
-li {
-    padding-left: 15px;
-    text-decoration: underline;
-    text-transform: uppercase;
 }

@@ -1,23 +1,85 @@
 #projects {
     background-color: rgb(110, 110, 110);
-    height: $sectionHeight;
-
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-        "directory directory dashboard dashboard gallery gallery"
-        "stylesheet stylesheet stylesheet form form form";
-
-    img {
-        height: 200px;
-        width: 200px;
-    }
-
-    .project {
-        margin: auto;
+    .grid {
+        padding-bottom: $section-padding;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "directory directory dashboard dashboard gallery gallery"
+            "stylesheet stylesheet stylesheet form form form";
     }
 }
+
+// -----------------------------
+// 3d Transforms ---------------
+// -----------------------------
+.project {
+    perspective: 2000px;
+    // box-shadow: 0 18px 40px 5px rgba(0,0,0,.4);
+    height: 300px;
+    width: 300px;
+    margin: 50px auto $section-padding auto;
+}
+
+.cube {
+    transform-style: preserve-3d;
+    transition: transform 1.5s ease-in-out;
+    &:hover {
+        transform: rotateX(270deg) rotateY(360deg);
+    }
+}
+
+.front,
+.back,
+.right,
+.left,
+.top,
+.bottom {
+    backface-visibility: hidden;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+
+.front {
+    transform: translateZ(150px);
+}
+
+.back {
+    position: absolute;
+    top: 0;
+	transform: rotateY(180deg) translateZ(150px);
+}
+.right {
+    position: absolute;
+    top: 0;
+	transform: rotateY(90deg) translate3d(150px, 0, 0);
+	transform-origin: top right;
+}
+
+.left {
+    position: absolute;
+    top: 0;
+	transform: rotateY(-90deg) translate3d(-150px, 0, 0);
+	transform-origin: top left;
+}
+
+.top {
+    position: absolute;
+    top: 0;
+    transform: rotateX(90deg) translateZ(150px);
+}
+.bottom {
+    position: absolute;
+    top: 0;
+    transform: rotateX(-90deg) translateZ(150px);
+}
+
+
+// -----------------------------
+// Grid Template Areas ---------
+// -----------------------------
 
 .directory {
  grid-area: directory;
