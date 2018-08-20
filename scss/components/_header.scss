@@ -11,18 +11,11 @@ header {
         position: relative;
         z-index: 1000;
     }
-
-    p {
-        text-align: center;
-        font-size: 1.5rem;
-        position: relative;
-        z-index: 1000;
-    }
     #img {
         &1 {
             left: 300px;
             position: relative;
-            top: -250px;
+            top: -150px;
             height: 400px;
             width: 300px;
             transition: top linear 2s;
@@ -30,7 +23,7 @@ header {
         &2 {
             left: 400px;
             position: relative;
-            top: -250px;
+            top: -150px;
             height: 400px;
             width: 300px;
         }

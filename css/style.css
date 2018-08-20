@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-  font-family: 'Inconsolata', monospace; }
+  font-family: 'Inconsolata', monospace;
+  scroll-behavior: smooth; }
 
 html {
   background-color: rgba(1, 1, 1, 0.1); }
@@ -45,14 +46,14 @@ h2 {
 
 #contactMe {
   background-color: #8c8c8c;
-  height: 500px; }
+  height: 600px; }
 
 footer {
   background-color: #a0a0a0; }
 
 header {
   background-color: gainsboro;
-  height: 500px; }
+  height: 600px; }
   header h1 {
     text-align: center;
     padding: 120px 0 0 0;
@@ -62,22 +63,17 @@ header {
     font-family: 'Inconsolata', monospace;
     position: relative;
     z-index: 1000; }
-  header p {
-    text-align: center;
-    font-size: 1.5rem;
-    position: relative;
-    z-index: 1000; }
   header #img1 {
     left: 300px;
     position: relative;
-    top: -250px;
+    top: -150px;
     height: 400px;
     width: 300px;
     transition: top linear 2s; }
   header #img2 {
     left: 400px;
     position: relative;
-    top: -250px;
+    top: -150px;
     height: 400px;
     width: 300px; }
 
