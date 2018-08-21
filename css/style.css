@@ -64,16 +64,13 @@ header {
     position: relative;
     z-index: 1000; }
   header #img1 {
-    left: 300px;
-    position: relative;
-    top: -150px;
+    position: absolute;
+    display: block;
     height: 400px;
-    width: 300px;
-    transition: top linear 2s; }
+    width: 300px; }
   header #img2 {
-    left: 400px;
-    position: relative;
-    top: -150px;
+    position: absolute;
+    display: block;
     height: 400px;
     width: 300px; }
 

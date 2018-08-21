@@ -13,17 +13,18 @@ header {
     }
     #img {
         &1 {
-            left: 300px;
-            position: relative;
-            top: -150px;
+            // left: 300px;
+            position: absolute;
+            display: block;
+            // top: -150px;
             height: 400px;
             width: 300px;
-            transition: top linear 2s;
         }
         &2 {
-            left: 400px;
-            position: relative;
-            top: -150px;
+            // left: 400px;
+            position: absolute;
+            display: block;
+            // top: -150px;
             height: 400px;
             width: 300px;
         }

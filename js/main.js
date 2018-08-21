@@ -1,7 +1,92 @@
-const img1 = document.getElementById('img1');
-const img2 = document.getElementById('img2');
+var _containerHeight = 600;
+var _width, _height, _scrollHeight;
+var _movingElements = [];
+var _scrollPercent = 0;
+var pre = prefix();
+var _jsPrefix  = pre.lowercase;
+if(_jsPrefix == 'moz') _jsPrefix = 'Moz'
+var _cssPrefix = pre.css;
+var _positions = [
+  {
+    name: 'img1', 
+    start: {
+    	percent: 0.2, x: -0.2, y: 0.2
+  	},
+    end: {
+      percent: 0.8, x: 0.9, y: 0.9
+    }
+  },
+  {
+    name: 'img2', 
+    start: {
+    	percent: 0.05, x: 0.9, y: 0.05
+  	},
+    end: {
+      percent: 0.7, x: 0.3, y: 0.9
+    }
+  },
+]
 
-img1.addEventListener('scroll', () => {
-    const scroll = window.pageYOffset;
-    img1.style.left = '0px';
-})
+resize();
+initMovingElements();
+
+function initMovingElements() {
+  for (var i = 0; i < _positions.length; i++) {
+    _positions[i].diff = {
+      percent: _positions[i].end.percent - _positions[i].start.percent,
+      x: _positions[i].end.x - _positions[i].start.x,
+      y: _positions[i].end.y - _positions[i].start.y,
+    }
+    var el = document.getElementsByClassName(_positions[i].name)[0];
+    _movingElements.push(el);
+  }
+}
+
+function resize() {
+	_width = window.innerWidth;
+  _height = window.innerHeight;
+  _scrollHeight = _containerHeight-_height;
+}
+
+function updateElements() {
+  for (var i = 0; i < _movingElements.length; i++) {
+    var p = _positions[i];
+    if(_scrollPercent <= p.start.percent) {
+      _movingElements[i].style[_jsPrefix+'Transform'] = 'translate3d('+(p.start.x*_width)+'px, '+(p.start.y*_containerHeight)+'px, 0px)';
+    } else if(_scrollPercent >= p.end.percent) {
+      _movingElements[i].style[_jsPrefix+'Transform'] = 'translate3d('+(p.end.x*_width)+'px, '+(p.end.y*_containerHeight)+'px, 0px)';
+    } else {
+      _movingElements[i].style[_jsPrefix+'Transform'] = 'translate3d('+(p.start.x*_width + (p.diff.x*(_scrollPercent-p.start.percent)/p.diff.percent*_width))+'px, '+
+        (p.start.y*_containerHeight + (p.diff.y*(_scrollPercent-p.start.percent)/p.diff.percent*_containerHeight))+'px, 0px)';
+    }
+  }
+}
+
+function loop() {
+  _scrollOffset = window.pageYOffset || window.scrollTop;
+  _scrollPercent = _scrollOffset/_scrollHeight || 0;
+  updateElements();
+  requestAnimationFrame(loop);
+}
+
+loop();
+
+window.addEventListener('resize', resize);
+
+/* prefix detection http://davidwalsh.name/vendor-prefix */
+
+function prefix() {
+  var styles = window.getComputedStyle(document.documentElement, ''),
+    pre = (Array.prototype.slice
+      .call(styles)
+      .join('') 
+      .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
+    )[1],
+    dom = ('WebKit|Moz|MS|O').match(new RegExp('(' + pre + ')', 'i'))[1];
+  return {
+    dom: dom,
+    lowercase: pre,
+    css: '-' + pre + '-',
+    js: pre[0].toUpperCase() + pre.substr(1)
+  };
+}
