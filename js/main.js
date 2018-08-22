@@ -10,19 +10,19 @@ var _positions = [
   {
     name: 'img1', 
     start: {
-    	percent: 0.2, x: -0.2, y: 0.2
+    	percent: 0.0, x: 0.2, y: -0.1
   	},
     end: {
-      percent: 0.8, x: 0.9, y: 0.9
+      percent: 0.0, x: 0.4, y: 0.0
     }
   },
   {
     name: 'img2', 
     start: {
-    	percent: 0.05, x: 0.9, y: 0.05
+    	percent: 0.0, x: 0.5, y: -0.1
   	},
     end: {
-      percent: 0.7, x: 0.3, y: 0.9
+      percent: 0.0, x: 1.0, y: 0.0
     }
   },
 ]

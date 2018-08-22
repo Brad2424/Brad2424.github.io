@@ -11,25 +11,25 @@ header {
         position: relative;
         z-index: 1000;
     }
-    #img {
-        &1 {
-            // left: 300px;
-            position: absolute;
-            display: block;
-            // top: -150px;
-            height: 400px;
-            width: 300px;
-        }
-        &2 {
-            // left: 400px;
-            position: absolute;
-            display: block;
-            // top: -150px;
-            height: 400px;
-            width: 300px;
-        }
-    }
 }
+
+.img1 {
+        // left: 300px;
+        position: absolute;
+        display: block;
+        // top: -150px;
+        height: 400px;
+        width: 300px;
+    }
+
+.img2 {
+        // left: 400px;
+        position: absolute;
+        display: block;
+        // top: -150px;
+        height: 400px;
+        width: 300px;
+    }
 
 nav {
     background-color: transparent;
