@@ -10,6 +10,7 @@ header {
         font-family: 'Inconsolata', monospace;
         position: relative;
         z-index: 1000;
+        text-transform: uppercase;
     }
     p {
         position: relative;
@@ -58,16 +59,16 @@ nav {
         margin-left: 10px;
         text-transform: uppercase;
         border: solid 2px transparent;
+        &:hover {
+            background-color:rgba(175, 157, 0, 1);
+            border: solid 2px white;
+        }
     }
     a {
         padding: 5px 10px;
         text-decoration: none;
         color: white;
         display: inline-block;
-        &:hover {
-            background-color:rgba(175, 157, 0, 1);
-            border: solid 2px white;
-        }
     }
 }
 .active {

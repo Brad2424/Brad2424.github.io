@@ -8,14 +8,16 @@
     }
     to {
         transform-origin: 50% 50%;
-        transform: rotateX(-180deg) rotateY(-270deg) translate3d(300px, 15px, 0px);
+        transform: rotateX(-180deg) rotateY(-270deg) translate3d(0px, 40px, 0px);
+        zoom: 120%;
     }
 }
 
 @keyframes leftReverse {
     from {
         transform-origin: 50% 50%;
-        transform: rotateX(-180deg) rotateY(-270deg) translate3d(300px, 15px, 0px);
+        transform: rotateX(-180deg) rotateY(-270deg) translate3d(0px, 40px, 0px);
+        zoom: 120%;
     }
     to {
         transform-origin: 50% 50%;
@@ -33,14 +35,16 @@
     }
     to {
         transform-origin: 50% 50%;
-        transform: rotateX(180deg) rotateY(270deg) translate3d(-300px, 15px, 0px);
+        transform: rotateX(180deg) rotateY(270deg) translate3d(0px, 40px, 0px);
+        zoom: 120%;
     }
 }
 
 @keyframes rightReverse {
     from {
         transform-origin: 50% 50%;
-        transform: rotateX(180deg) rotateY(270deg) translate3d(-300px, 15px, 0px);
+        transform: rotateX(180deg) rotateY(270deg) translate3d(0px, 40px, 0px);
+        zoom: 120%;
     }
     to {
         transform-origin: 50% 50%;
@@ -58,14 +62,16 @@
     }
     to {
         transform-origin: 50% 50%;
-        transform: rotateX(180deg) rotateY(-90deg) translate3d(-300px, 15px, 0px);
+        transform: rotateX(180deg) rotateY(-90deg) translate3d(0px, 40px, 0px);
+        zoom: 120%;
     }
 }
 
 @keyframes centerReverse {
     from {
         transform-origin: 50% 50%;
-        transform: rotateX(180deg) rotateY(-90deg) translate3d(-300px, 15px, 0px);
+        transform: rotateX(180deg) rotateY(-90deg) translate3d(0px, 40px, 0px);
+        zoom: 120%;
     }
     to {
         transform-origin: 50% 50%;

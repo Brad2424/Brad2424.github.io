@@ -1,4 +1,22 @@
 #contactMe {
-    background-color: rgb(140, 140 , 140);
-    height: $section-height;
+    background-color: rgba(1,1,1,0.1);
+    padding-bottom: 20px;
+    color: blue;
+    .flex {
+        display: flex;
+        justify-content: center;
+    }
+    a {
+        padding-right: 10px;
+        margin: 10px 0;
+        text-decoration: none;
+    }
+    p {
+        text-align: center;
+    }
+}
+
+.email::before {
+    content: "Email: ";
+    color:rgba(175, 157, 0, 1);
 }

@@ -1,5 +1,5 @@
 #projects {
-    background-color: rgb(182, 179, 179);
+    background-color: rgb(220, 220 , 220);
     .grid {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -17,8 +17,38 @@
     perspective: 2000px;
     height: 300px;
     width: 300px;
-    margin: 50px auto 30px auto;
+    margin: 50px auto 50px auto;
+    h3 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    span {
+        font-weight: bold;
+    }
+    p{
+        margin: 10px 0 0 0;
+        font-size: 0.7rem;
+        font-family: 'Montserrat', sans-serif;
+    }
+    a {
+        color: white;
+        display: inline-block;
+        margin: 5px;
+    }
+    // class below is to center align all information in cube //
+    .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
+// class below is to center align links with svg's //
+.flex-svg-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 // left-hand side cubes
 .directory .cube, .stylesheet .cube {
@@ -47,6 +77,7 @@
 // center cubes
 .dashboard .cube {
     transform-style: preserve-3d;
+    transition: transform 0.5s;
     animation: centerReverse 0.5s ease-in-out forwards;
     &:hover {
         animation: centerSpin 0.5s ease-in-out forwards;
@@ -63,7 +94,7 @@
 .top,
 .bottom {
     backface-visibility: hidden;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(175, 157, 0, 1);
     height: 300px;
     width: 300px;
 }
@@ -82,14 +113,18 @@
     position: absolute;
     top: 0;
 	transform: rotateY(270deg) rotateX(180deg) translate3d(150px, 0, 0);
-	transform-origin: right;
+    transform-origin: right;
+    padding: 20px; // padding for the informtion about project //
+    color: white;
 }
 
 .left {
     position: absolute;
     top: 0;
 	transform: rotateY(-270deg) rotateX(180deg) translate3d(-150px, 0, 0);
-	transform-origin: left;
+    transform-origin: left;
+    padding: 20px; // padding for the informtion about project //
+    color: white;
 }
 
 .top {
