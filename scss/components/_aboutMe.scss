@@ -2,24 +2,32 @@
     background-color: rgba(175, 157, 0, 1);
     background: linear-gradient(rgba(175, 157, 0, 0.5), rgba(175, 157, 0, 0.5)), url('https://placeimg.com/640/480/nature/grayscale');
     color: white;
+    height: $section-height;
+
+    .container {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        margin: 50px auto;
+    }
 
     img {
         border-radius: 50%;
         border: solid 1px white;
         height: 200px;
         width: 200px;
+        display: block;
+        margin: auto; 
     }
-    .introduction {
-        flex: 2;
-        margin: 0 $edgeGap 50px 0;
-        * {
-            font-family: 'Montserrat', sans-serif;
-        }
-    }
-    .profileImage {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        margin-top: 2.5rem;
+}
+
+.profile-picture {
+    flex: 1;
+}
+
+.introduction {
+    flex: 2;
+    * {
+        font-family: 'Montserrat', sans-serif;
     }
 }

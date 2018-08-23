@@ -1,4 +1,4 @@
-var _containerHeight = 600;
+var _containerHeight = 4000;
 var _width, _height, _scrollHeight;
 var _movingElements = [];
 var _scrollPercent = 0;
@@ -8,49 +8,49 @@ if(_jsPrefix == 'moz') _jsPrefix = 'Moz'
 var _cssPrefix = pre.css;
 var _positions = [
   {
-    name: 'img1', 
-    start: {
-    	percent: 0.0, x: 0.2, y: -0.1
+    name: '1', 
+   	start: {
+    	percent: 0.0, x: 0, y: -0
   	},
     end: {
-      percent: 0.0, x: 0.4, y: 0.0
+      percent: 0.1, x: -0.5, y: -0
     }
   },
   {
-    name: 'img2', 
-    start: {
-    	percent: 0.0, x: 0.5, y: -0.1
+    name: '2', 
+   	start: {
+    	percent: 0.0, x: 0.5, y: -0
   	},
     end: {
-      percent: 0.0, x: 1.0, y: 0.0
+      percent: 0.1, x: 1, y: -0
     }
-  },
+  }
 ]
 
 resize();
 initMovingElements();
 
 function initMovingElements() {
-  for (var i = 0; i < _positions.length; i++) {
+  for (let i = 0; i < _positions.length; i++) {
     _positions[i].diff = {
       percent: _positions[i].end.percent - _positions[i].start.percent,
       x: _positions[i].end.x - _positions[i].start.x,
       y: _positions[i].end.y - _positions[i].start.y,
     }
-    var el = document.getElementsByClassName(_positions[i].name)[0];
+    const el = document.getElementsByClassName('img'+_positions[i].name)[0];
     _movingElements.push(el);
   }
 }
 
 function resize() {
-	_width = window.innerWidth;
+	_width = 1400;
   _height = window.innerHeight;
   _scrollHeight = _containerHeight-_height;
 }
 
 function updateElements() {
-  for (var i = 0; i < _movingElements.length; i++) {
-    var p = _positions[i];
+  for (let i = 0; i < _movingElements.length; i++) {
+    const p = _positions[i];
     if(_scrollPercent <= p.start.percent) {
       _movingElements[i].style[_jsPrefix+'Transform'] = 'translate3d('+(p.start.x*_width)+'px, '+(p.start.y*_containerHeight)+'px, 0px)';
     } else if(_scrollPercent >= p.end.percent) {
@@ -62,10 +62,13 @@ function updateElements() {
   }
 }
 
+
+
 function loop() {
   _scrollOffset = window.pageYOffset || window.scrollTop;
   _scrollPercent = _scrollOffset/_scrollHeight || 0;
   updateElements();
+  
   requestAnimationFrame(loop);
 }
 

@@ -1,8 +1,8 @@
 header {
     background-color: rgb(220, 220 , 220);
-    height: $sectionHeight;
+    height: $section-height;
+    text-align: center;
     h1 {
-        text-align: center;
         padding: 120px 0 0 0;
         margin: 0;
         color: rgba(175, 157, 0, 1);
@@ -11,26 +11,15 @@ header {
         position: relative;
         z-index: 1000;
     }
+    p {
+        z-index: 1000;
+        color: rgba(175, 157, 0, 1);
+    }
 }
 
-.img1 {
-        // left: 300px;
-        position: absolute;
-        display: block;
-        // top: -150px;
-        height: 400px;
-        width: 300px;
-    }
-
-.img2 {
-        // left: 400px;
-        position: absolute;
-        display: block;
-        // top: -150px;
-        height: 400px;
-        width: 300px;
-    }
-
+// --------------------------
+// Menu Spy plugin for navbar
+// --------------------------
 nav {
     background-color: transparent;
     display: flex;
@@ -41,7 +30,7 @@ nav {
     top: 5px;
     width: 100%;
     max-width: $body-max-width;
-    z-index: 2000;
+    z-index: 10000;
     ul {
         list-style-type: none;
         margin-right: $edgeGap;
@@ -49,18 +38,59 @@ nav {
     span {
         flex: 1;
         margin-left: $edgeGap;
+        text-align: left;
     }
-    a {
-        color: white;
+    li {
+        display: inline-block;
         background-color: rgba(175, 157, 0, 0.6);
         margin-left: 10px;
-        text-decoration: none;
-        padding: 5px 10px;
         text-transform: uppercase;
-        border: solid 1px transparent;
+        border: solid 2px transparent;
+    }
+    a {
+        padding: 5px 10px;
+        text-decoration: none;
+        color: white;
+        display: inline-block;
         &:hover {
             background-color:rgba(175, 157, 0, 1);
-            border: solid 1px white;
+            border: solid 2px white;
         }
+    }
+}
+.active {
+    background-color:rgba(175, 157, 0, 1);
+    border: solid 2px white;
+    transition: transform 0.5s;
+    transform: scale(1.2);
+}
+// --------------------------
+// Moving images on scroll
+// --------------------------
+
+.image-container {
+    height: $section-height;
+    overflow-x: hidden;
+    width: $body-max-width;
+    position: absolute;
+    top: 0;
+}
+
+div.img {
+    &1 {
+        background: url("https://placeimg.com/300/600/tech/grayscale");
+        width: 50%;
+        max-width: calc(#{$body-max-width} * 0.5);
+        height: 100%;
+        display: block;
+        position: absolute;
+    }
+    &2 {
+        background: url("https://placeimg.com/300/600/people/grayscale");
+        width: 50%;
+        max-width: calc(#{$body-max-width} * 0.5);
+        height: 100%;
+        display: block;
+        position: absolute;
     }
 }

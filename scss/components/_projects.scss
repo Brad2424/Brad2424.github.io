@@ -1,7 +1,6 @@
 #projects {
     background-color: rgb(182, 179, 179);
     .grid {
-        padding-bottom: $section-padding;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 1fr 1fr;
@@ -18,7 +17,7 @@
     perspective: 2000px;
     height: 300px;
     width: 300px;
-    margin: 50px auto $section-padding auto;
+    margin: 50px auto 30px auto;
 }
 
 // left-hand side cubes
@@ -64,7 +63,7 @@
 .top,
 .bottom {
     backface-visibility: hidden;
-    background-color: rgb(100, 100, 100);
+    background-color: rgb(255, 255, 255);
     height: 300px;
     width: 300px;
 }
@@ -82,15 +81,15 @@
 .right {
     position: absolute;
     top: 0;
-	transform: rotateY(90deg) translate3d(150px, 0, 0);
-	transform-origin: top right;
+	transform: rotateY(270deg) rotateX(180deg) translate3d(150px, 0, 0);
+	transform-origin: right;
 }
 
 .left {
     position: absolute;
     top: 0;
-	transform: rotateY(-90deg) translate3d(-150px, 0, 0);
-	transform-origin: top left;
+	transform: rotateY(-270deg) rotateX(180deg) translate3d(-150px, 0, 0);
+	transform-origin: left;
 }
 
 .top {
