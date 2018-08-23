@@ -43,7 +43,11 @@ function initMovingElements() {
 }
 
 function resize() {
-	_width = 1400;
+  if (window.innerWidth > 1400) {
+    _width = 1400;
+  } else {
+    _width = window.innerWidth;
+  }
   _height = window.innerHeight;
   _scrollHeight = _containerHeight-_height;
 }

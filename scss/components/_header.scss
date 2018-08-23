@@ -1,6 +1,6 @@
 header {
     background-color: rgb(220, 220 , 220);
-    height: $section-height;
+    height: calc(#{$section-height} * 1.5);
     text-align: center;
     h1 {
         padding: 120px 0 0 0;
@@ -12,6 +12,7 @@ header {
         z-index: 1000;
     }
     p {
+        position: relative;
         z-index: 1000;
         color: rgba(175, 157, 0, 1);
     }
@@ -69,11 +70,13 @@ nav {
 // --------------------------
 
 .image-container {
-    height: $section-height;
+    height: calc(#{$section-height} * 1.5);
     overflow-x: hidden;
-    width: $body-max-width;
+    width: 100vw;
+    max-width: #{$body-max-width};
     position: absolute;
     top: 0;
+    z-index: 1;
 }
 
 div.img {
