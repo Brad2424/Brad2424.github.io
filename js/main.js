@@ -1,4 +1,6 @@
-var _containerHeight = 4000;
+// https://codepen.io/rachsmith/pen/bdVpgY
+
+var _containerHeight = 2100;
 var _width, _height, _scrollHeight;
 var _movingElements = [];
 var _scrollPercent = 0;
@@ -13,7 +15,7 @@ var _positions = [
     	percent: 0.0, x: 0, y: -0
   	},
     end: {
-      percent: 0.1, x: -0.5, y: -0
+      percent: 0.5, x: -0.5, y: -0
     }
   },
   {
@@ -22,7 +24,7 @@ var _positions = [
     	percent: 0.0, x: 0.5, y: -0
   	},
     end: {
-      percent: 0.1, x: 1, y: -0
+      percent: 0.5, x: 1, y: -0
     }
   }
 ]

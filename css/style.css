@@ -101,7 +101,7 @@ header {
   height: calc(600px * 1.5);
   text-align: center; }
   header h1 {
-    padding: 120px 0 0 0;
+    padding: 15% 0 0 0;
     margin: 0;
     color: #af9d00;
     font-size: 5rem;
@@ -111,7 +111,16 @@ header {
   header p {
     position: relative;
     z-index: 1000;
-    color: #af9d00; }
+    color: #af9d00;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0; }
+  header .unicode {
+    display: inline-block;
+    font-size: 5rem;
+    color: white; }
+  header .rotate {
+    transform: rotate(90deg); }
 
 nav {
   background-color: transparent;
