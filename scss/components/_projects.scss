@@ -1,5 +1,8 @@
 #projects {
-    background-color: rgb(220, 220 , 220);
+    background-image: url('../images/section-images/IMG_3889_1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     .grid {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
