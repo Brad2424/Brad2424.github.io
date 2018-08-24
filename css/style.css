@@ -53,34 +53,39 @@
 
 body {
   max-width: 1400px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-align: center; }
 
 svg {
   width: 50px;
   height: 50px; }
 
 h2 {
-  text-align: center;
   color: #af9d00;
   font-size: 2.5rem;
-  margin: 0;
-  padding: 20px 0 10px 0; }
+  margin: 20px;
+  padding: 10px;
+  background-color: rgba(220, 220, 220, 0.6);
+  border-radius: 10px;
+  display: inline-block; }
 
 #aboutMe {
-  background-color: #af9d00;
-  background-image: url("../../images/section-images/IMG_1903(resized).png");
+  background-image: url("../images/section-images/IMG_1903.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   color: white;
   height: 600px; }
   #aboutMe .container {
     display: flex;
     align-items: center;
     width: 70%;
-    margin: 50px auto; }
+    margin: 40px auto; }
   #aboutMe img {
     border-radius: 50%;
     border: solid 1px white;
-    height: 200px;
-    width: 200px;
+    height: 240px;
+    width: 240px;
     display: block;
     margin: auto; }
 
@@ -88,9 +93,12 @@ h2 {
   flex: 1; }
 
 .introduction {
-  flex: 2; }
+  flex: 2;
+  background-color: rgba(175, 157, 0, 0.7);
+  border-radius: 10px; }
   .introduction * {
-    font-family: 'Montserrat', sans-serif; }
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px; }
 
 #contactMe {
   background-color: rgba(1, 1, 1, 0.1);
@@ -186,7 +194,7 @@ nav {
 .image-container {
   height: calc(600px * 1.5);
   overflow-x: hidden;
-  width: 100vw;
+  width: 100%;
   max-width: 1400px;
   position: absolute;
   top: 0;
@@ -293,7 +301,7 @@ div.img2 {
   top: 0;
   transform: rotateY(270deg) rotateX(180deg) translate3d(150px, 0, 0);
   transform-origin: right;
-  padding: 20px;
+  padding: 10px;
   color: white; }
 
 .left {
@@ -301,7 +309,7 @@ div.img2 {
   top: 0;
   transform: rotateY(-270deg) rotateX(180deg) translate3d(-150px, 0, 0);
   transform-origin: left;
-  padding: 20px;
+  padding: 10px;
   color: white; }
 
 .top {

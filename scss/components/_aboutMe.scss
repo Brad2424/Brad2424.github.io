@@ -1,6 +1,8 @@
 #aboutMe {
-    background-color: rgba(175, 157, 0, 1);
-    background-image: url('../../images/section-images/IMG_1903\(resized\).png');
+    background-image: url('../images/section-images/IMG_1903.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     color: white;
     height: $section-height;
 
@@ -8,14 +10,14 @@
         display: flex;
         align-items: center;
         width: 70%;
-        margin: 50px auto;
+        margin: 40px auto;
     }
 
     img {
         border-radius: 50%;
         border: solid 1px white;
-        height: 200px;
-        width: 200px;
+        height: 240px;
+        width: 240px;
         display: block;
         margin: auto; 
     }
@@ -27,7 +29,10 @@
 
 .introduction {
     flex: 2;
+    background-color: rgba(175, 157, 0, 0.7);
+    border-radius: 10px;
     * {
         font-family: 'Montserrat', sans-serif;
+        padding: 10px;
     }
 }

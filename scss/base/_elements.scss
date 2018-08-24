@@ -7,6 +7,7 @@
 body {
     max-width: $body-max-width;
     margin: 0 auto;
+    text-align: center;
 }
 
 svg {
@@ -15,9 +16,11 @@ svg {
 }
 
 h2 {
-    text-align: center;
     color: rgba(175, 157, 0, 1);
     font-size: 2.5rem;
-    margin: 0;
-    padding: 20px 0 10px 0;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgba(220, 220 , 220, 0.6);
+    border-radius: 10px;
+    display: inline-block;
 }

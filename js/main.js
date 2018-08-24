@@ -1,5 +1,3 @@
-// https://codepen.io/rachsmith/pen/bdVpgY
-
 var _containerHeight = 2100;
 var _width, _height, _scrollHeight;
 var _movingElements = [];

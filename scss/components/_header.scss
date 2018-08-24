@@ -84,7 +84,7 @@ nav {
 .image-container {
     height: calc(#{$section-height} * 1.5);
     overflow-x: hidden;
-    width: 100vw;
+    width: 100%;
     max-width: #{$body-max-width};
     position: absolute;
     top: 0;
