@@ -77,7 +77,7 @@ h2 {
       font-size: 2.5rem; } }
 
 #aboutMe {
-  background-image: url("../images/section-images/IMG_1903.jpg");
+  background-image: url("../images/section-images/IMG_1903.JPG");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -152,7 +152,7 @@ h2 {
   content: "Email: "; }
 
 footer {
-  background-color: rgba(175, 157, 0, 0.7);
+  background-color: #af9d00;
   color: black; }
   footer span {
     display: block;
@@ -161,7 +161,7 @@ footer {
     font-size: 0.9rem; }
 
 header {
-  background-image: url("../images/section-images/IMG_3889_1.jpg");
+  background-image: url("../images/section-images/IMG_3889_1.JPG");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -282,7 +282,7 @@ div.img2 {
   flex: 1; }
 
 #projects {
-  background-image: url("../images/section-images/IMG_3889_1.jpg");
+  background-image: url("../images/section-images/IMG_3889_1.JPG");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; }

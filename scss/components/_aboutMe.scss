@@ -1,10 +1,9 @@
 #aboutMe {
-    background-image: url('../images/section-images/IMG_1903.jpg');
+    background-image: url('../images/section-images/IMG_1903.JPG');
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
     padding-bottom: 20px;
-
     .container {
         display: flex;
         flex-direction: column;
@@ -17,7 +16,6 @@
             margin: 40px auto;
         }
     }
-
     img {
         order: 1;
         border-radius: 50%;
