@@ -11,21 +11,23 @@ body {
 }
 
 svg {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
+    @include mq('small') {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 h2 {
     color: rgba(175, 157, 0, 1);
     font-size: 1.5rem;
-    margin: 10px;
+    margin: 20px;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
     display: inline-block;
     @include mq('small') {
         font-size: 2.5rem;
-        margin: 20px;
-        padding: 10px;
     }
 }

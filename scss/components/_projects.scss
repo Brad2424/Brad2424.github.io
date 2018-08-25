@@ -5,11 +5,29 @@
     background-attachment: fixed;
     .grid {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
         grid-template-areas: 
-            "directory directory dashboard dashboard gallery gallery"
-            "stylesheet stylesheet stylesheet form form form";
+            "dashboard"
+            "directory"
+            "gallery"
+            "stylesheet"
+            "form";
+        @include mq('small') {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas: 
+                "directory directory dashboard dashboard"
+                "stylesheet stylesheet gallery gallery"
+                "form form form form";
+        }
+        @include mq('medium') {
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: 
+                "directory directory dashboard dashboard gallery gallery"
+                "stylesheet stylesheet stylesheet form form form";
+        }
     }
 }
 
@@ -18,25 +36,44 @@
 // -----------------------------
 .project {
     perspective: 2000px;
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     margin: 50px auto 50px auto;
+    @include mq('small') {
+        height: 300px;
+        width: 300px;
+        margin: 50px auto 50px auto;
+    }
     h3 {
         margin: 0;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        @include mq('small') {
+            font-size: 1.5rem;
+        }
     }
     span {
+        font-size: 0.8rem;
         font-weight: bold;
+        @include mq('small') {
+            font-size: 1rem;
+        }
     }
     p{
         margin: 10px 0 0 0;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         font-family: 'Montserrat', sans-serif;
+        @include mq('small') {
+            font-size: 0.7rem;
+        }
     }
     a {
         color: white;
         display: inline-block;
         margin: 5px;
+        font-size: 0.9rem;
+        @include mq('small') {
+            font-size: 1rem;
+        }
     }
     // class below is to center align all information in cube //
     .flex {
@@ -81,9 +118,17 @@
 .dashboard .cube {
     transform-style: preserve-3d;
     transition: transform 0.5s;
-    animation: centerReverse 0.5s ease-in-out forwards;
+    animation: rightReverse 0.5s ease-in-out forwards;
+    @include mq('medium') {
+            animation: centerReverse 0.5s ease-in-out forwards;
+    }
     &:hover {
-        animation: centerSpin 0.5s ease-in-out forwards;
+        animation: rightSpin 0.5s ease-in-out forwards;
+        @include mq('medium') {
+            &:hover {
+                animation: centerSpin 0.5s ease-in-out forwards;
+            }
+        }
         .front {
             box-shadow: none;
         }
@@ -98,48 +143,71 @@
 .bottom {
     backface-visibility: hidden;
     background-color: rgba(175, 157, 0, 1);
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
+    @include mq('small') {
+        height: 300px;
+        width: 300px;
+    }
 }
 
 .front {
     box-shadow: 20px 10px 40px 10px rgba(0,0,0,.6);
-    transform: translateZ(150px);
-
+    transform: translateZ(125px);
+    @include mq('small') {
+        transform: translateZ(150px);
+    }
 }
 .back {
     position: absolute;
     top: 0;
-	transform: rotateY(180deg) translateZ(150px);
+    transform: rotateY(180deg) translateZ(125px);
+    @include mq('small') {
+        transform: rotateY(180deg) translateZ(150px);
+    }
 }
 .right {
     position: absolute;
     top: 0;
-	transform: rotateY(270deg) rotateX(180deg) translate3d(150px, 0, 0);
+	transform: rotateY(270deg) rotateX(180deg) translate3d(125px, 0, 0);
     transform-origin: right;
     padding: 10px; // padding for the informtion about project //
     color: white;
+    @include mq('small') {
+        transform: rotateY(270deg) rotateX(180deg) translate3d(150px, 0, 0);
+    }
 }
 
 .left {
     position: absolute;
     top: 0;
-	transform: rotateY(-270deg) rotateX(180deg) translate3d(-150px, 0, 0);
+	transform: rotateY(-270deg) rotateX(180deg) translate3d(-125px, 0, 0);
     transform-origin: left;
     padding: 10px; // padding for the informtion about project //
     color: white;
+    @include mq('small') {
+        transform: rotateY(-270deg) rotateX(180deg) translate3d(-150px, 0, 0);
+    }
 }
 
 .top {
+    backface-visibility: visible;
     box-shadow: 10px 20px 40px 10px rgba(0,0,0,.3);
     position: absolute;
     top: 0;
-    transform: rotateX(90deg) translateZ(150px);
+    transform: rotateX(90deg) translateZ(125px);
+    @include mq('small') {
+        transform: rotateX(90deg) translateZ(150px);
+    }
 }
 .bottom {
+    backface-visibility: visible;
     position: absolute;
     top: 0;
-    transform: rotateX(-90deg) translateZ(150px);
+    transform: rotateX(-90deg) translateZ(-125px);
+    @include mq('small') {
+        transform: rotateX(90deg) translateZ(-150px);
+    }
 }
 
 

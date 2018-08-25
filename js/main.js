@@ -19,10 +19,10 @@ var _positions = [
   {
     name: '2', 
    	start: {
-    	percent: 0.0, x: 0.45, y: 0
+    	percent: 0.0, x: 0, y: 0
   	},
     end: {
-      percent: 0.5, x: 1, y: 0
+      percent: 0.5, x: 0.5, y: 0
     }
   }
 ]

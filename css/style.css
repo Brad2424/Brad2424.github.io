@@ -57,36 +57,38 @@ body {
   text-align: center; }
 
 svg {
-  width: 50px;
-  height: 50px; }
+  width: 30px;
+  height: 30px; }
+  @media (min-width: 768px) {
+    svg {
+      width: 50px;
+      height: 50px; } }
 
 h2 {
   color: #af9d00;
   font-size: 1.5rem;
-  margin: 10px;
+  margin: 20px;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   display: inline-block; }
   @media (min-width: 768px) {
     h2 {
-      font-size: 2.5rem;
-      margin: 20px;
-      padding: 10px; } }
+      font-size: 2.5rem; } }
 
 #aboutMe {
   background-image: url("../images/section-images/IMG_1903.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-  height: 600px; }
+  padding-bottom: 20px; }
   #aboutMe .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 90%;
     margin: 10px auto; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       #aboutMe .container {
         flex-direction: row;
         width: 70%;
@@ -98,35 +100,47 @@ h2 {
     height: 150px;
     width: 150px;
     display: block;
-    margin: auto; }
+    margin: auto;
+    flex: 1;
+    margin-bottom: 20px; }
     @media (min-width: 768px) {
+      #aboutMe img {
+        height: 200px;
+        width: 200px;
+        order: unset; } }
+    @media (min-width: 1024px) {
       #aboutMe img {
         height: 240px;
         width: 240px;
-        order: 2; } }
-
-.profile-picture {
-  flex: 1; }
+        margin: 20px; } }
 
 .introduction {
   order: 2;
   flex: 2;
   background-color: rgba(175, 157, 0, 0.7);
-  border-radius: 10px; }
+  border-radius: 10px;
+  font-size: 0.8rem; }
   @media (min-width: 768px) {
     .introduction {
-      order: 1; } }
-  .introduction * {
+      font-size: 1rem; } }
+  @media (min-width: 1024px) {
+    .introduction {
+      order: unset; } }
+  .introduction p {
     font-family: 'Montserrat', sans-serif;
-    padding: 10px; }
+    padding: 0; }
+    @media (min-width: 1024px) {
+      .introduction p {
+        padding: 10px; } }
 
 #contact {
   background-color: rgba(1, 1, 1, 0.5);
-  padding-bottom: 20px;
-  color: white; }
+  color: white;
+  padding-bottom: 10px; }
   #contact .flex {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    padding: 20px; }
   #contact a {
     padding-right: 10px;
     margin: 10px 0;
@@ -152,13 +166,14 @@ header {
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
-  height: calc(600px * 0.8); }
+  height: calc(600px * 0.8);
+  display: flex;
+  flex-direction: column; }
   @media (min-width: 768px) {
     header {
       height: calc(600px * 1.2); } }
   header h1 {
-    position: relative;
-    top: 70px;
+    padding-top: 30px;
     z-index: 1000;
     color: #af9d00;
     font-size: 2rem;
@@ -189,6 +204,7 @@ nav {
   z-index: 10000; }
   @media (min-width: 768px) {
     nav {
+      flex-direction: row;
       height: 50px;
       color: white;
       position: fixed;
@@ -202,7 +218,8 @@ nav {
     @media (min-width: 768px) {
       nav ul {
         margin-right: 40px;
-        margin-left: auto; } }
+        margin-left: auto;
+        width: initial; } }
   nav li {
     margin: 5px;
     background-color: rgba(175, 157, 0, 0.6);
@@ -224,8 +241,7 @@ nav {
     margin: 10px; }
     @media (min-width: 768px) {
       nav span {
-        margin-left: 40px;
-        text-align: left; } }
+        margin-left: 40px; } }
   nav a {
     padding: 5px 10px;
     text-decoration: none;
@@ -243,38 +259,27 @@ nav {
     transform: scale(1.2); } }
 
 .image-container {
-  height: 600px;
+  flex: 1;
   overflow-x: hidden;
   width: 100%;
   max-width: 1400px;
-  position: absolute;
-  top: 0px;
-  z-index: 1; }
-  @media (min-width: 768px) {
-    .image-container {
-      height: calc(600px * 1.2); } }
+  z-index: 1;
+  display: flex; }
 
 div.img1 {
   background-image: url("../images/section-images/IMG_E3909_1.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: contain;
   background-position: center;
-  width: 50%;
   max-width: calc(1400px * 0.5);
-  height: 100%;
-  display: block;
-  position: absolute;
-  bottom: 0; }
+  flex: 1; }
 div.img2 {
   background-image: url("../images/section-images/IMG_3907_1.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: contain;
   background-position: center;
-  width: 50%;
   max-width: calc(1400px * 0.5);
-  height: 100%;
-  display: block;
-  position: absolute; }
+  flex: 1; }
 
 #projects {
   background-image: url("../images/section-images/IMG_3889_1.jpg");
@@ -283,28 +288,57 @@ div.img2 {
   background-attachment: fixed; }
   #projects .grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "directory directory dashboard dashboard gallery gallery" "stylesheet stylesheet stylesheet form form form"; }
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "dashboard" "directory" "gallery" "stylesheet" "form"; }
+    @media (min-width: 768px) {
+      #projects .grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "directory directory dashboard dashboard" "stylesheet stylesheet gallery gallery" "form form form form"; } }
+    @media (min-width: 1024px) {
+      #projects .grid {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "directory directory dashboard dashboard gallery gallery" "stylesheet stylesheet stylesheet form form form"; } }
 
 .project {
   perspective: 2000px;
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
   margin: 50px auto 50px auto; }
+  @media (min-width: 768px) {
+    .project {
+      height: 300px;
+      width: 300px;
+      margin: 50px auto 50px auto; } }
   .project h3 {
     margin: 0;
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
+    @media (min-width: 768px) {
+      .project h3 {
+        font-size: 1.5rem; } }
   .project span {
+    font-size: 0.8rem;
     font-weight: bold; }
+    @media (min-width: 768px) {
+      .project span {
+        font-size: 1rem; } }
   .project p {
     margin: 10px 0 0 0;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-family: 'Montserrat', sans-serif; }
+    @media (min-width: 768px) {
+      .project p {
+        font-size: 0.7rem; } }
   .project a {
     color: white;
     display: inline-block;
-    margin: 5px; }
+    margin: 5px;
+    font-size: 0.9rem; }
+    @media (min-width: 768px) {
+      .project a {
+        font-size: 1rem; } }
   .project .flex {
     display: flex;
     flex-direction: column;
@@ -334,9 +368,15 @@ div.img2 {
 .dashboard .cube {
   transform-style: preserve-3d;
   transition: transform 0.5s;
-  animation: centerReverse 0.5s ease-in-out forwards; }
+  animation: rightReverse 0.5s ease-in-out forwards; }
+  @media (min-width: 1024px) {
+    .dashboard .cube {
+      animation: centerReverse 0.5s ease-in-out forwards; } }
   .dashboard .cube:hover {
-    animation: centerSpin 0.5s ease-in-out forwards; }
+    animation: rightSpin 0.5s ease-in-out forwards; }
+    @media (min-width: 1024px) {
+      .dashboard .cube:hover:hover {
+        animation: centerSpin 0.5s ease-in-out forwards; } }
     .dashboard .cube:hover .front {
       box-shadow: none; }
 
@@ -348,44 +388,73 @@ div.img2 {
 .bottom {
   backface-visibility: hidden;
   background-color: #af9d00;
-  height: 300px;
-  width: 300px; }
+  height: 250px;
+  width: 250px; }
+  @media (min-width: 768px) {
+    .front,
+    .back,
+    .right,
+    .left,
+    .top,
+    .bottom {
+      height: 300px;
+      width: 300px; } }
 
 .front {
   box-shadow: 20px 10px 40px 10px rgba(0, 0, 0, 0.6);
-  transform: translateZ(150px); }
+  transform: translateZ(125px); }
+  @media (min-width: 768px) {
+    .front {
+      transform: translateZ(150px); } }
 
 .back {
   position: absolute;
   top: 0;
-  transform: rotateY(180deg) translateZ(150px); }
+  transform: rotateY(180deg) translateZ(125px); }
+  @media (min-width: 768px) {
+    .back {
+      transform: rotateY(180deg) translateZ(150px); } }
 
 .right {
   position: absolute;
   top: 0;
-  transform: rotateY(270deg) rotateX(180deg) translate3d(150px, 0, 0);
+  transform: rotateY(270deg) rotateX(180deg) translate3d(125px, 0, 0);
   transform-origin: right;
   padding: 10px;
   color: white; }
+  @media (min-width: 768px) {
+    .right {
+      transform: rotateY(270deg) rotateX(180deg) translate3d(150px, 0, 0); } }
 
 .left {
   position: absolute;
   top: 0;
-  transform: rotateY(-270deg) rotateX(180deg) translate3d(-150px, 0, 0);
+  transform: rotateY(-270deg) rotateX(180deg) translate3d(-125px, 0, 0);
   transform-origin: left;
   padding: 10px;
   color: white; }
+  @media (min-width: 768px) {
+    .left {
+      transform: rotateY(-270deg) rotateX(180deg) translate3d(-150px, 0, 0); } }
 
 .top {
+  backface-visibility: visible;
   box-shadow: 10px 20px 40px 10px rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 0;
-  transform: rotateX(90deg) translateZ(150px); }
+  transform: rotateX(90deg) translateZ(125px); }
+  @media (min-width: 768px) {
+    .top {
+      transform: rotateX(90deg) translateZ(150px); } }
 
 .bottom {
+  backface-visibility: visible;
   position: absolute;
   top: 0;
-  transform: rotateX(-90deg) translateZ(150px); }
+  transform: rotateX(-90deg) translateZ(-125px); }
+  @media (min-width: 768px) {
+    .bottom {
+      transform: rotateX(90deg) translateZ(-150px); } }
 
 .directory {
   grid-area: directory; }

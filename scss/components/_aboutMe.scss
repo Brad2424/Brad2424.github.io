@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-    height: $section-height;
+    padding-bottom: 20px;
 
     .container {
         display: flex;
@@ -11,7 +11,7 @@
         align-items: center;
         width: 90%;
         margin: 10px auto;
-        @include mq('small') {
+        @include mq('medium') {
             flex-direction: row;
             width: 70%;
             margin: 40px auto;
@@ -26,16 +26,19 @@
         width: 150px;
         display: block;
         margin: auto; 
+        flex: 1;
+        margin-bottom: 20px;
         @include mq('small') {
+            height: 200px;
+            width: 200px;
+            order: unset;
+        }
+        @include mq('medium') {
             height: 240px;
             width: 240px;
-            order: 2;
+            margin: 20px;
         }
     }
-}
-
-.profile-picture {
-    flex: 1;
 }
 
 .introduction {
@@ -43,11 +46,18 @@
     flex: 2;
     background-color: rgba(175, 157, 0, 0.7);
     border-radius: 10px;
+    font-size: 0.8rem;
     @include mq('small') {
-        order: 1;
+        font-size: 1rem;
     }
-    * {
+    @include mq('medium') {
+        order: unset;
+    }
+    p {
         font-family: 'Montserrat', sans-serif;
-        padding: 10px;
+        padding: 0;
+        @include mq('medium') {
+            padding: 10px;
+        }
     }
 }
