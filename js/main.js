@@ -4,8 +4,7 @@ var _movingElements = [];
 var _scrollPercent = 0;
 var pre = prefix();
 var _jsPrefix  = pre.lowercase;
-if(_jsPrefix == 'moz') _jsPrefix = 'Moz'
-var _cssPrefix = pre.css;
+if(_jsPrefix == 'moz') _jsPrefix = 'Moz';
 var _positions = [
   {
     name: '1', 
@@ -25,7 +24,7 @@ var _positions = [
       percent: 0.5, x: 0.5, y: 0
     }
   }
-]
+];
 
 resize();
 initMovingElements();
@@ -36,7 +35,7 @@ function initMovingElements() {
       percent: _positions[i].end.percent - _positions[i].start.percent,
       x: _positions[i].end.x - _positions[i].start.x,
       y: _positions[i].end.y - _positions[i].start.y,
-    }
+    };
     const el = document.getElementsByClassName('img'+_positions[i].name)[0];
     _movingElements.push(el);
   }

@@ -152,7 +152,7 @@ h2 {
   content: "Email: "; }
 
 footer {
-  background-color: #af9d00;
+  background-color: rgba(175, 157, 0, 0.8);
   color: black; }
   footer span {
     display: block;
