@@ -161,7 +161,7 @@ footer {
     font-size: 0.9rem; }
 
 header {
-  background-image: url("../images/section-images/IMG_3889_1.JPG");
+  background-image: url("../images/section-images/IMG_3889_1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -282,7 +282,7 @@ div.img2 {
   flex: 1; }
 
 #projects {
-  background-image: url("../images/section-images/IMG_3889_1.JPG");
+  background-image: url("../images/section-images/IMG_3889_1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; }
