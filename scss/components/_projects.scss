@@ -21,7 +21,7 @@
                 "stylesheet stylesheet gallery gallery"
                 "form form form form";
         }
-        @include mq('medium') {
+        @include mq('large') {
             grid-template-columns: repeat(6, 1fr);
             grid-template-rows: 1fr 1fr;
             grid-template-areas: 
@@ -119,12 +119,12 @@
     transform-style: preserve-3d;
     transition: transform 0.5s;
     animation: rightReverse 0.5s ease-in-out forwards;
-    @include mq('medium') {
+    @include mq('large') {
             animation: centerReverse 0.5s ease-in-out forwards;
     }
     &:hover {
         animation: rightSpin 0.5s ease-in-out forwards;
-        @include mq('medium') {
+        @include mq('large') {
             &:hover {
                 animation: centerSpin 0.5s ease-in-out forwards;
             }
@@ -141,7 +141,6 @@
 .left,
 .top,
 .bottom {
-    backface-visibility: hidden;
     background-color: rgba(175, 157, 0, 1);
     height: 250px;
     width: 250px;
@@ -191,8 +190,6 @@
 }
 
 .top {
-    backface-visibility: visible;
-    box-shadow: 10px 20px 40px 10px rgba(0,0,0,.3);
     position: absolute;
     top: 0;
     transform: rotateX(90deg) translateZ(125px);
@@ -201,7 +198,6 @@
     }
 }
 .bottom {
-    backface-visibility: visible;
     position: absolute;
     top: 0;
     transform: rotateX(-90deg) translateZ(-125px);

@@ -296,7 +296,7 @@ div.img2 {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas: "directory directory dashboard dashboard" "stylesheet stylesheet gallery gallery" "form form form form"; } }
-    @media (min-width: 1024px) {
+    @media (min-width: 1280px) {
       #projects .grid {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 1fr 1fr;
@@ -369,12 +369,12 @@ div.img2 {
   transform-style: preserve-3d;
   transition: transform 0.5s;
   animation: rightReverse 0.5s ease-in-out forwards; }
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     .dashboard .cube {
       animation: centerReverse 0.5s ease-in-out forwards; } }
   .dashboard .cube:hover {
     animation: rightSpin 0.5s ease-in-out forwards; }
-    @media (min-width: 1024px) {
+    @media (min-width: 1280px) {
       .dashboard .cube:hover:hover {
         animation: centerSpin 0.5s ease-in-out forwards; } }
     .dashboard .cube:hover .front {
@@ -386,7 +386,6 @@ div.img2 {
 .left,
 .top,
 .bottom {
-  backface-visibility: hidden;
   background-color: #af9d00;
   height: 250px;
   width: 250px; }
@@ -438,8 +437,6 @@ div.img2 {
       transform: rotateY(-270deg) rotateX(180deg) translate3d(-150px, 0, 0); } }
 
 .top {
-  backface-visibility: visible;
-  box-shadow: 10px 20px 40px 10px rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 0;
   transform: rotateX(90deg) translateZ(125px); }
@@ -448,7 +445,6 @@ div.img2 {
       transform: rotateX(90deg) translateZ(150px); } }
 
 .bottom {
-  backface-visibility: visible;
   position: absolute;
   top: 0;
   transform: rotateX(-90deg) translateZ(-125px); }

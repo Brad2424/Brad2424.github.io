@@ -119,11 +119,6 @@ nav {
     max-width: #{$body-max-width};
     z-index: 1;
     display: flex;
-    @include mq('small') {
-        // position: absolute;
-        // top: 0px;
-        // height: calc(#{$section-height} * 1.2);
-    }
 }
 
 div.img {
