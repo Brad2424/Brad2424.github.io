@@ -1,7 +1,7 @@
 #projects {
     background-image: url('../images/section-images/IMG_3889_1.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-attachment: fixed;
     .grid {
         display: grid;
@@ -60,11 +60,8 @@
     }
     p{
         margin: 10px 0 0 0;
-        font-size: 0.6rem;
+        font-size: 0.7rem;
         font-family: 'Montserrat', sans-serif;
-        @include mq('small') {
-            font-size: 0.7rem;
-        }
     }
     a {
         color: white;
@@ -93,21 +90,41 @@
 // left-hand side cubes
 .directory .cube, .stylesheet .cube {
     transform-style: preserve-3d;
-    animation: leftReverse 0.5s ease-in-out forwards;
+    animation: leftReverse 0.3s ease-in-out forwards;
+    @include mq('medium') {
+        animation: leftReverse 0.5s ease-in-out forwards;
+    }
     &:hover {
-        animation: leftSpin 0.5s ease-in-out forwards;
+        animation: leftSpin 0.3s ease-in-out forwards;
+        @include mq('medium') {
+            animation: leftSpin 0.5s ease-in-out forwards;
+        }
         .front {
             box-shadow: none;
         }
     }
 }
 
+.leftSpin {
+    animation: leftSpin 0.3s ease-in-out forwards;
+}
+.leftReverse {
+    animation: leftReverse 0.5s ease-in-out forwards;
+}
+
+
 // right-hand side cubes
 .gallery .cube, .form .cube {
     transform-style: preserve-3d;
-    animation: rightReverse 0.5s ease-in-out forwards;
+    animation: rightReverse 0.3s ease-in-out forwards;
+    @include mq('medium') {
+        animation: rightReverse 0.5s ease-in-out forwards;
+    }
     &:hover {
-        animation: rightSpin 0.5s ease-in-out forwards;
+        animation: rightSpin 0.3s ease-in-out forwards;
+        @include mq('medium') {
+            animation: rightSpin 0.5s ease-in-out forwards;
+        }
         .front {
             box-shadow: none;
         }
@@ -118,12 +135,18 @@
 .dashboard .cube {
     transform-style: preserve-3d;
     transition: transform 0.5s;
-    animation: rightReverse 0.5s ease-in-out forwards;
+    animation: rightReverse 0.3s ease-in-out forwards;
+    @include mq('medium') {
+        animation: rightReverse 0.5s ease-in-out forwards;
+    }
     @include mq('large') {
             animation: centerReverse 0.5s ease-in-out forwards;
     }
     &:hover {
-        animation: rightSpin 0.5s ease-in-out forwards;
+        animation: rightSpin 0.3s ease-in-out forwards;
+        @include mq('medium') {
+            animation: rightSpin 0.5s ease-in-out forwards;
+        }
         @include mq('large') {
             &:hover {
                 animation: centerSpin 0.5s ease-in-out forwards;
