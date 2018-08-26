@@ -1,11 +1,11 @@
-var _containerHeight = 2100;
-var _width, _height, _scrollHeight;
-var _movingElements = [];
-var _scrollPercent = 0;
-var pre = prefix();
-var _jsPrefix  = pre.lowercase;
+const _containerHeight = 2100;
+let _width, _height, _scrollHeight;
+const _movingElements = [];
+let _scrollPercent = 0;
+const pre = prefix();
+let _jsPrefix  = pre.lowercase;
 if(_jsPrefix == 'moz') _jsPrefix = 'Moz';
-var _positions = [
+const _positions = [
   {
     name: '1', 
    	start: {
@@ -68,7 +68,7 @@ function updateElements() {
 
 
 function loop() {
-  _scrollOffset = window.pageYOffset || window.scrollTop;
+  let _scrollOffset = window.pageYOffset || window.scrollTop;
   _scrollPercent = _scrollOffset/_scrollHeight || 0;
   updateElements();
   
@@ -82,7 +82,7 @@ window.addEventListener('resize', resize);
 /* prefix detection http://davidwalsh.name/vendor-prefix */
 
 function prefix() {
-  var styles = window.getComputedStyle(document.documentElement, ''),
+  const styles = window.getComputedStyle(document.documentElement, ''),
     pre = (Array.prototype.slice
       .call(styles)
       .join('') 
