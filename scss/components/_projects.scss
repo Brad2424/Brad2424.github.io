@@ -105,14 +105,6 @@
     }
 }
 
-.leftSpin {
-    animation: leftSpin 0.3s ease-in-out forwards;
-}
-.leftReverse {
-    animation: leftReverse 0.5s ease-in-out forwards;
-}
-
-
 // right-hand side cubes
 .gallery .cube, .form .cube {
     transform-style: preserve-3d;
