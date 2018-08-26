@@ -32,6 +32,39 @@
 }
 
 // -----------------------------
+// Skill styling ---------------
+// -----------------------------
+
+.html {
+    @extend %skill;
+    background-color: rgb(142, 142, 255);
+}
+.css {
+    @extend %skill;
+    background-color: rgb(255, 139, 139);
+}
+.javascript {
+    @extend %skill;
+    background-color: rgb(121, 56, 115);
+}
+.fetch-API {
+    @extend %skill;
+    background-color: rgb(255, 153, 0);
+}
+.jquery {
+    @extend %skill;
+    background-color: rgb(46, 122, 2);
+}
+.sass {
+    @extend %skill;
+    background-color: rgb(1, 105, 91);
+}
+.svg {
+    @extend %skill;
+    background-color: rgb(0, 0, 0);
+}
+
+// -----------------------------
 // 3d Transforms ---------------
 // -----------------------------
 .project {
@@ -51,9 +84,9 @@
             font-size: 1.5rem;
         }
     }
-    span {
+    h4 {
+        margin: 0;
         font-size: 0.8rem;
-        font-weight: bold;
         @include mq('small') {
             font-size: 1rem;
         }
@@ -162,6 +195,10 @@
     @include mq('small') {
         height: 300px;
         width: 300px;
+    }
+    img {
+        height: 100%;
+        width: 100%;
     }
 }
 

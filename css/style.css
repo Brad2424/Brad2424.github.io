@@ -1,3 +1,13 @@
+.html, .css, .javascript, .fetch-API, .jquery, .sass, .svg {
+  padding: 5px;
+  border-radius: 100px;
+  display: inline-block;
+  font-size: 0.5rem;
+  font-family: 'Montserrat', sans-serif; }
+  @media (min-width: 768px) {
+    .html, .css, .javascript, .fetch-API, .jquery, .sass, .svg {
+      font-size: 0.7rem; } }
+
 @keyframes leftSpin {
   from {
     transform-origin: 50% 50%;
@@ -305,6 +315,27 @@ div.img2 {
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "directory directory dashboard dashboard gallery gallery" "stylesheet stylesheet stylesheet form form form"; } }
 
+.html {
+  background-color: #8e8eff; }
+
+.css {
+  background-color: #ff8b8b; }
+
+.javascript {
+  background-color: #793873; }
+
+.fetch-API {
+  background-color: #ff9900; }
+
+.jquery {
+  background-color: #2e7a02; }
+
+.sass {
+  background-color: #01695b; }
+
+.svg {
+  background-color: black; }
+
 .project {
   perspective: 2000px;
   height: 250px;
@@ -321,11 +352,11 @@ div.img2 {
     @media (min-width: 768px) {
       .project h3 {
         font-size: 1.5rem; } }
-  .project span {
-    font-size: 0.8rem;
-    font-weight: bold; }
+  .project h4 {
+    margin: 0;
+    font-size: 0.8rem; }
     @media (min-width: 768px) {
-      .project span {
+      .project h4 {
         font-size: 1rem; } }
   .project p {
     margin: 10px 0 0 0;
@@ -416,6 +447,14 @@ div.img2 {
     .bottom {
       height: 300px;
       width: 300px; } }
+  .front img,
+  .back img,
+  .right img,
+  .left img,
+  .top img,
+  .bottom img {
+    height: 100%;
+    width: 100%; }
 
 .front {
   box-shadow: 20px 10px 40px 10px rgba(0, 0, 0, 0.6);
