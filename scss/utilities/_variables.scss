@@ -5,8 +5,13 @@ $breakpoint-sml: 768px;
 $breakpoint-med: 1024px;
 $breakpoint-lrg: 1280px;
 // -----------------------------
-// LAYOUT------------------
+// LAYOUT-----------------------
 // -----------------------------
 $edgeGap: 40px;
 $section-height: 600px;
 $body-max-width: 1400px;
+// -----------------------------
+// COLORS-----------------------
+// -----------------------------
+$primary-color: rgb(153, 130, 0);
+$primary-color-faded: rgba(153, 130, 1, 0.7);

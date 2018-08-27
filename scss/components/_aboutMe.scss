@@ -17,6 +17,7 @@
         }
     }
     img {
+        background: white;
         order: 1;
         border-radius: 50%;
         border: solid 1px white;
@@ -42,7 +43,7 @@
 .introduction {
     order: 2;
     flex: 2;
-    background-color: rgba(175, 157, 0, 0.7);
+    background-color: $primary-color-faded;
     border-radius: 10px;
     font-size: 0.8rem;
     @include mq('small') {

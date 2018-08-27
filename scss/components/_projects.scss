@@ -203,7 +203,7 @@
 .left,
 .top,
 .bottom {
-    background-color: rgba(175, 157, 0, 1);
+    background-color: $primary-color;
     height: 250px;
     width: 250px;
     @include mq('small') {

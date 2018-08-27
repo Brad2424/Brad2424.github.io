@@ -14,13 +14,13 @@
         <nav>
             <span>Bradley Murchison</span>
             <ul class="navBar">
-                <li><a href="#top">Top</a></li>
+                <li class="active"><a href="#top">Top</a></li>
                 <li><a href="#aboutMe">About</a></li>
                 <li><a href="#projects">My work</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <h1><span class="unicode">&#9968;</span>Web-Developer<span class="unicode">&#9968;</span></h1>
+        <h1><span class="unicode">&#9881;</span>Web-Developer<span class="unicode">&#9881;</span></h1>
         <div class="image-container">
             <div class="img1"></div>
             <div class="img2"></div>
@@ -42,7 +42,7 @@
                             <p>Ut vis graece malorum, mei ad rebum probatus, ad eius pertinacia adversarium eos. Pri sumo omnis accusata no. Convenire reprehendunt cu sea, an augue habemus invenire has. Vis veritus hendrerit reformidans ad, ei deleniti constituto vel, no dolore partem maluisset nam.</p>
                         </div>
                     <div class="profile-picture">
-                        <img src="images/profile-image.JPG" alt="Photo of Bradley Murchison">
+                        <img src="" alt="Photo of Bradley Murchison">
                     </div>
                 </div>
         </section>
@@ -308,7 +308,9 @@
 <script src="js/menuspy-min.js"></script>
     <script>
         const navBar = document.querySelector('.navBar');
-        const ms = new MenuSpy(navBar);
+        const ms = new MenuSpy(navBar, {
+            threshold : 275,
+        });
     </script>
 <script src="js/moving-images.js"></script>
 </body> 
