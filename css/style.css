@@ -190,12 +190,13 @@ header {
   header h1 {
     padding-top: 30px;
     z-index: 1000;
-    color: #af9d00;
+    color: white;
     font-size: 2.2rem;
     font-weight: bold;
     margin: 0; }
     @media (min-width: 768px) {
       header h1 {
+        color: #af9d00;
         position: relative;
         top: 200px;
         font-size: 5rem;

@@ -14,11 +14,12 @@ header {
     h1 {
         padding-top: 30px; 
         z-index: 1000;
-        color: rgba(175, 157, 0, 1);
+        color: white;
         font-size: 2.2rem;
         font-weight: bold;
         margin: 0;
         @include mq('small') {
+            color: rgba(175, 157, 0, 1);
             position: relative;
             top: 200px;
             font-size: 5rem;
