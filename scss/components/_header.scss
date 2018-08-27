@@ -12,13 +12,19 @@ header {
         height: calc(#{$section-height} * 1.2);
     }
     h1 {
-        padding-top: 30px; 
+        display: inline-block;
+        padding: 10px;
+        margin: 40px auto;
+        width: 90%;
         z-index: 1000;
         color: white;
-        font-size: 2.2rem;
+        font-size: 2rem;
         font-weight: bold;
-        margin: 0;
+        background: $primary-color;
+        border-radius: 5px;
         @include mq('small') {
+            width: 100%;
+            background: transparent;
             color: $primary-color;
             position: relative;
             top: 200px;
@@ -59,7 +65,7 @@ nav {
         list-style-type: none;
         padding: 0;
         margin: 0;
-        width: 90%;
+        width: 80%;
         z-index: 1000;
         @include mq('small') {
             margin-right: $edgeGap;
@@ -120,28 +126,38 @@ nav {
 
 .image-container {
     flex: 1;
-    overflow-x: hidden;
+    overflow: hidden;
     width: 100%;
     max-width: #{$body-max-width};
     z-index: 1;
     display: flex;
-}
-
-div.img {
-    &1 {
-        background-image: url('../images/section-images/IMG_E3909_1.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        max-width: calc(#{$body-max-width} * 0.5);
-        flex: 1;
+    position: absolute;
+    height: calc(#{$section-height} * 0.8);
+        @include mq('small') {
+        height: calc(#{$section-height} * 1.2);
     }
-    &2 {
-        background-image: url('../images/section-images/IMG_3907_1.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        max-width: calc(#{$body-max-width} * 0.5);
-        flex: 1;
+    div.img {
+        &1 {
+            // background-image: url('../images/section-images/IMG_E3909_1.png');
+            // background-repeat: no-repeat;
+            // background-size: contain;
+            // background-position: center;
+            width: 50%;
+            max-width: calc(#{$body-max-width} * 0.5);
+            flex: 1;
+        }
+        &2 {
+            // background-image: url('../images/section-images/IMG_3907_1.png');
+            // background-repeat: no-repeat;
+            // background-size: contain;
+            // background-position: center;
+            width: 50%;
+            max-width: calc(#{$body-max-width} * 0.5);
+            flex: 1;
+        }
+    }
+    img {
+        width: 100%;
+        height: 100%;
     }
 }
