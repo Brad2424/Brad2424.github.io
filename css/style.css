@@ -407,12 +407,14 @@ div.img2 {
   @media (min-width: 1024px) {
     .directory .cube, .stylesheet .cube {
       animation: leftReverse 0.5s ease-in-out forwards; } }
+  .directory .cube .back, .stylesheet .cube .back {
+    box-shadow: 20px 10px 40px 10px rgba(0, 0, 0, 0.6); }
   .directory .cube:hover, .stylesheet .cube:hover {
     animation: leftSpin 0.3s ease-in-out forwards; }
     @media (min-width: 1024px) {
       .directory .cube:hover, .stylesheet .cube:hover {
         animation: leftSpin 0.5s ease-in-out forwards; } }
-    .directory .cube:hover .front, .stylesheet .cube:hover .front {
+    .directory .cube:hover .back, .stylesheet .cube:hover .back {
       box-shadow: none; }
 
 .gallery .cube, .form .cube {
@@ -421,12 +423,14 @@ div.img2 {
   @media (min-width: 1024px) {
     .gallery .cube, .form .cube {
       animation: rightReverse 0.5s ease-in-out forwards; } }
+  .gallery .cube .back, .form .cube .back {
+    box-shadow: -20px 10px 40px 10px rgba(0, 0, 0, 0.6); }
   .gallery .cube:hover, .form .cube:hover {
     animation: rightSpin 0.3s ease-in-out forwards; }
     @media (min-width: 1024px) {
       .gallery .cube:hover, .form .cube:hover {
         animation: rightSpin 0.5s ease-in-out forwards; } }
-    .gallery .cube:hover .front, .form .cube:hover .front {
+    .gallery .cube:hover .back, .form .cube:hover .back {
       box-shadow: none; }
 
 .dashboard .cube {
@@ -439,6 +443,8 @@ div.img2 {
   @media (min-width: 1280px) {
     .dashboard .cube {
       animation: centerReverse 0.5s ease-in-out forwards; } }
+  .dashboard .cube .back {
+    box-shadow: -20px 10px 40px 10px rgba(0, 0, 0, 0.6); }
   .dashboard .cube:hover {
     animation: rightSpin 0.3s ease-in-out forwards; }
     @media (min-width: 1024px) {
@@ -447,7 +453,7 @@ div.img2 {
     @media (min-width: 1280px) {
       .dashboard .cube:hover:hover {
         animation: centerSpin 0.5s ease-in-out forwards; } }
-    .dashboard .cube:hover .front {
+    .dashboard .cube:hover .back {
       box-shadow: none; }
 
 .front,
@@ -478,7 +484,6 @@ div.img2 {
     width: 100%; }
 
 .front {
-  box-shadow: 20px 10px 40px 10px rgba(0, 0, 0, 0.6);
   transform: translateZ(125px); }
   @media (min-width: 768px) {
     .front {

@@ -141,12 +141,15 @@
     @include mq('medium') {
         animation: leftReverse 0.5s ease-in-out forwards;
     }
+    .back {
+        box-shadow: 20px 10px 40px 10px rgba(0,0,0,.6);
+    }
     &:hover {
         animation: leftSpin 0.3s ease-in-out forwards;
         @include mq('medium') {
             animation: leftSpin 0.5s ease-in-out forwards;
         }
-        .front {
+        .back {
             box-shadow: none;
         }
     }
@@ -159,12 +162,15 @@
     @include mq('medium') {
         animation: rightReverse 0.5s ease-in-out forwards;
     }
+    .back {
+        box-shadow: -20px 10px 40px 10px rgba(0,0,0,.6);
+    }
     &:hover {
         animation: rightSpin 0.3s ease-in-out forwards;
         @include mq('medium') {
             animation: rightSpin 0.5s ease-in-out forwards;
         }
-        .front {
+        .back {
             box-shadow: none;
         }
     }
@@ -181,6 +187,9 @@
     @include mq('large') {
             animation: centerReverse 0.5s ease-in-out forwards;
     }
+    .back {
+        box-shadow: -20px 10px 40px 10px rgba(0,0,0,.6);
+    }
     &:hover {
         animation: rightSpin 0.3s ease-in-out forwards;
         @include mq('medium') {
@@ -191,7 +200,7 @@
                 animation: centerSpin 0.5s ease-in-out forwards;
             }
         }
-        .front {
+        .back {
             box-shadow: none;
         }
     }
@@ -217,7 +226,6 @@
 }
 
 .front {
-    box-shadow: 20px 10px 40px 10px rgba(0,0,0,.6);
     transform: translateZ(125px);
     @include mq('small') {
         transform: translateZ(150px);
