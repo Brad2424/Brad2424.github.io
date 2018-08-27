@@ -34,7 +34,9 @@
 // -----------------------------
 // Skill styling ---------------
 // -----------------------------
-
+.skills {
+    margin-top: 10px;
+}
 .html {
     @extend %skill;
     background-color: rgb(142, 142, 255);
@@ -105,11 +107,18 @@
             font-size: 1rem;
         }
     }
+    svg {
+        width: 25px;
+        height: 25px;
+        @include mq('small') {
+            width: 50px;
+            height: 50px;
+        }
+    }
     // class below is to center align all information in cube //
     .flex {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
     }
 }
 // class below is to center align links with svg's //
@@ -117,6 +126,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
 }
 
 

@@ -5,7 +5,13 @@
     .flex {
         display: flex;
         justify-content: center;
-        padding: 20px;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .flex-contact-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     a {
         padding-right: 10px;
@@ -15,8 +21,13 @@
     p {
         text-align: center;
     }
+    svg {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 .email::before {
-    content: "Email: ";
+    content: "Email";
+    text-decoration: underline;
 }
