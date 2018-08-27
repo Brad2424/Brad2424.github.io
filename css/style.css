@@ -1,11 +1,11 @@
-.html, .css, .javascript, .fetch-API, .jquery, .sass, .svg {
+.html, .css, .javascript, .fetch-API, .jquery, .sass, .svg, .json {
   padding: 5px;
   border-radius: 100px;
   display: inline-block;
   font-size: 0.5rem;
   font-family: 'Montserrat', sans-serif; }
   @media (min-width: 768px) {
-    .html, .css, .javascript, .fetch-API, .jquery, .sass, .svg {
+    .html, .css, .javascript, .fetch-API, .jquery, .sass, .svg, .json {
       font-size: 0.7rem; } }
 
 @keyframes leftSpin {
@@ -344,6 +344,9 @@ div.img2 {
 
 .svg {
   background-color: black; }
+
+.json {
+  background-color: red; }
 
 .project {
   perspective: 2000px;
