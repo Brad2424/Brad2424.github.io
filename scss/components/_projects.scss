@@ -15,6 +15,13 @@
         @include mq('small') {
             font-size: 1rem;
         }
+        a{
+            color: white;
+            font-size: 1rem;
+            @include mq('small') {
+                font-size: 1.3rem;
+            }
+        }
     }
     .grid {
         display: grid;
