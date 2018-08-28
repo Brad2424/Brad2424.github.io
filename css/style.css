@@ -189,20 +189,19 @@ header {
     header {
       height: calc(600px * 1.2); } }
   header h1 {
-    display: inline-block;
     padding: 10px;
     margin: 40px auto;
     z-index: 1000;
-    color: white;
+    color: #998200;
+    border-top: 3px solid #998200;
+    border-bottom: 3px solid #998200;
     font-size: 2rem;
     font-weight: bold;
-    background: #998200;
-    border-radius: 10px; }
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%; }
     @media (min-width: 820px) {
       header h1 {
         width: 100%;
-        background: transparent;
-        color: white;
         position: relative;
         top: 200px;
         font-size: 6rem;
@@ -210,7 +209,7 @@ header {
   header .unicode {
     display: inline-block;
     font-size: 2rem;
-    color: white;
+    color: rgba(153, 130, 1, 0.7);
     margin: 0 5px; }
     @media (min-width: 820px) {
       header .unicode {
