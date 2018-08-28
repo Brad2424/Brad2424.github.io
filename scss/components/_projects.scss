@@ -235,7 +235,6 @@
     background-color: $primary-color-faded;
     height: 250px;
     width: 250px;
-    backface-visibility: hidden;
     @include mq('small') {
         height: 300px;
         width: 300px;
@@ -248,6 +247,7 @@
 
 .front {
     transform: translateZ(125px);
+    backface-visibility: hidden;
     @include mq('small') {
         transform: translateZ(150px);
     }
