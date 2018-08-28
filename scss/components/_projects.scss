@@ -1,8 +1,21 @@
 #projects {
-    background-image: url('../images/section-images/back.png');
+    background-image: url('../images/section-images/Back.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
+    h3 {
+        background-color: rgb(62, 71, 80);
+        border-radius: 100px; 
+        color: white;
+        padding: 10px;
+        display: inline-block;
+        margin: 0 auto;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.8rem;
+        @include mq('small') {
+            font-size: 1rem;
+        }
+    }
     .grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -83,14 +96,14 @@
         width: 300px;
         margin: 50px auto 50px auto;
     }
-    h3 {
+    h4 {
         margin: 0;
         font-size: 1.2rem;
         @include mq('small') {
             font-size: 1.5rem;
         }
     }
-    h4 {
+    h5 {
         margin: 0;
         font-size: 0.8rem;
         @include mq('small') {
