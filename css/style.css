@@ -118,13 +118,21 @@ h2 {
         height: 240px;
         width: 240px;
         margin: 20px; } }
+  #aboutMe .active-fade-in {
+    opacity: 1; }
+
+.profile-picture {
+  opacity: 0;
+  transition: all 1s; }
 
 .introduction {
   order: 2;
   flex: 2;
   background-color: rgba(153, 130, 1, 0.8);
   border-radius: 10px;
-  font-size: 0.8rem; }
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: all 1s; }
   @media (min-width: 820px) {
     .introduction {
       font-size: 1rem; } }

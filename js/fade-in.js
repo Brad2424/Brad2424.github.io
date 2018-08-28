@@ -1,4 +1,4 @@
-function debounce(func, wait = 20, immediate = true) {
+function debounce(func, wait = 30, immediate = true) {
   var timeout;
   return function() {
     var context = this, args = arguments;
@@ -13,22 +13,23 @@ function debounce(func, wait = 20, immediate = true) {
   };
 };
 
-const sliderImages = document.querySelectorAll('.slide-in');
+const fadeInElements = document.querySelectorAll('.fade-in');
 
-function checkSlide() {
-  sliderImages.forEach(sliderImage => {
-    // half way through the image
-    const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
-    // bottom of the image
-    const imageBottom = sliderImage.offsetTop + sliderImage.height;
-    const isHalfShown = slideInAt > sliderImage.offsetTop;
-    const isNotScrolledPast = window.scrollY < imageBottom;
+function checkFadeIn() {
+  fadeInElements.forEach(fadeInElement => {
+    // upper part of the element
+    const slideInAt = (window.scrollY + window.innerHeight) - (fadeInElement.clientHeight / 10);
+    // bottom of the element
+    const elementBottom = fadeInElement.offsetTop + fadeInElement.clientHeight;
+    const isHalfShown = slideInAt > fadeInElement.offsetTop;
+    const isNotScrolledPast = window.scrollY < elementBottom;
     if (isHalfShown && isNotScrolledPast) {
-      sliderImage.classList.add('active');
+      fadeInElement.classList.add('active-fade-in');
     } else {
-      sliderImage.classList.remove('active');
+      fadeInElement.classList.remove('active-fade-in');
     }
+    console.log('executed');
   });
 }
 
-window.addEventListener('scroll', debounce(checkSlide));
+window.addEventListener('scroll', debounce(checkFadeIn));
