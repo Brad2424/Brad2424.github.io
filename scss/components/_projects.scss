@@ -225,9 +225,10 @@
 .left,
 .top,
 .bottom {
-    background-color: $primary-color;
+    background-color: $primary-color-faded;
     height: 250px;
     width: 250px;
+    backface-visibility: hidden;
     @include mq('small') {
         height: 300px;
         width: 300px;
@@ -287,9 +288,9 @@
 .bottom {
     position: absolute;
     top: 0;
-    transform: rotateX(-90deg) translateZ(-125px);
+    transform: rotateX(-90deg) translateZ(125px);
     @include mq('small') {
-        transform: rotateX(90deg) translateZ(-150px);
+        transform: rotateX(-90deg) translateZ(150px);
     }
 }
 
