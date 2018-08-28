@@ -12,6 +12,7 @@ body {
     max-width: $body-max-width;
     margin: 0 auto;
     text-align: center;
+    overflow-x: hidden;
 }
 
 h2 {
