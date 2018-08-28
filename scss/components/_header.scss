@@ -1,5 +1,5 @@
 header {
-    background-image: url('../images/section-images/IMG_3889_1.jpg');
+    background-image: url('../images/section-images/back.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
@@ -15,17 +15,16 @@ header {
         display: inline-block;
         padding: 10px;
         margin: 40px auto;
-        width: 90%;
         z-index: 1000;
         color: white;
         font-size: 2rem;
         font-weight: bold;
         background: $primary-color;
-        border-radius: 5px;
+        border-radius: 10px;
         @include mq('small') {
             width: 100%;
             background: transparent;
-            color: $primary-color;
+            color: white;
             position: relative;
             top: 200px;
             font-size: 6rem;
@@ -36,8 +35,10 @@ header {
         display: inline-block;
         font-size: 2rem;
         color: white;
+        margin: 0 5px;
         @include mq('small') {
             font-size: 5rem;
+            color: $primary-color-faded;
         }
     }
 }

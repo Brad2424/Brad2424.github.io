@@ -4,7 +4,7 @@
   display: inline-block;
   font-size: 0.5rem;
   font-family: 'Montserrat', sans-serif; }
-  @media (min-width: 800px) {
+  @media (min-width: 820px) {
     .html, .css, .javascript, .fetch-API, .jquery, .sass, .svg, .json {
       font-size: 0.7rem; } }
 
@@ -77,7 +77,7 @@ h2 {
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   display: inline-block; }
-  @media (min-width: 800px) {
+  @media (min-width: 820px) {
     h2 {
       font-size: 2.5rem; } }
 
@@ -109,7 +109,7 @@ h2 {
     margin: auto;
     flex: 1;
     margin-bottom: 20px; }
-    @media (min-width: 800px) {
+    @media (min-width: 820px) {
       #aboutMe img {
         height: 200px;
         width: 200px;
@@ -126,7 +126,7 @@ h2 {
   background-color: rgba(153, 130, 1, 0.7);
   border-radius: 10px;
   font-size: 0.8rem; }
-  @media (min-width: 800px) {
+  @media (min-width: 820px) {
     .introduction {
       font-size: 1rem; } }
   @media (min-width: 1024px) {
@@ -176,7 +176,7 @@ footer {
     font-size: 0.9rem; }
 
 header {
-  background-image: url("../images/section-images/IMG_3889_1.jpg");
+  background-image: url("../images/section-images/back.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
@@ -185,25 +185,24 @@ header {
   height: calc(600px * 0.8);
   display: flex;
   flex-direction: column; }
-  @media (min-width: 800px) {
+  @media (min-width: 820px) {
     header {
       height: calc(600px * 1.2); } }
   header h1 {
     display: inline-block;
     padding: 10px;
     margin: 40px auto;
-    width: 90%;
     z-index: 1000;
     color: white;
     font-size: 2rem;
     font-weight: bold;
     background: #998200;
-    border-radius: 5px; }
-    @media (min-width: 800px) {
+    border-radius: 10px; }
+    @media (min-width: 820px) {
       header h1 {
         width: 100%;
         background: transparent;
-        color: #998200;
+        color: white;
         position: relative;
         top: 200px;
         font-size: 6rem;
@@ -211,10 +210,12 @@ header {
   header .unicode {
     display: inline-block;
     font-size: 2rem;
-    color: white; }
-    @media (min-width: 800px) {
+    color: white;
+    margin: 0 5px; }
+    @media (min-width: 820px) {
       header .unicode {
-        font-size: 5rem; } }
+        font-size: 5rem;
+        color: rgba(153, 130, 1, 0.7); } }
 
 nav {
   background-color: transparent;
@@ -225,7 +226,7 @@ nav {
   width: 100%;
   max-width: 1400px;
   z-index: 10000; }
-  @media (min-width: 800px) {
+  @media (min-width: 820px) {
     nav {
       flex-direction: row;
       height: 50px;
@@ -238,7 +239,7 @@ nav {
     margin: 0;
     width: 80%;
     z-index: 1000; }
-    @media (min-width: 800px) {
+    @media (min-width: 820px) {
       nav ul {
         margin-right: 40px;
         margin-left: auto;
@@ -248,7 +249,7 @@ nav {
     background-color: rgba(153, 130, 1, 0.7);
     text-transform: uppercase;
     border: solid 2px transparent; }
-    @media (min-width: 800px) {
+    @media (min-width: 820px) {
       nav li {
         display: inline-block;
         margin-left: 10px; }
@@ -263,7 +264,7 @@ nav {
     border: 1px solid #998200;
     padding: 10px;
     margin: 10px; }
-    @media (min-width: 800px) {
+    @media (min-width: 820px) {
       nav span {
         margin-left: 40px; } }
   nav a {
@@ -272,13 +273,13 @@ nav {
     color: white;
     display: block;
     font-size: 1.2rem; }
-    @media (min-width: 800px) {
+    @media (min-width: 820px) {
       nav a {
         display: inline-block;
         font-size: 1rem;
         padding: 5px 10px; } }
 
-@media (min-width: 800px) {
+@media (min-width: 820px) {
   .active {
     background-color: #998200;
     border: solid 2px white;
@@ -294,7 +295,7 @@ nav {
   display: flex;
   position: absolute;
   height: calc(600px * 0.8); }
-  @media (min-width: 800px) {
+  @media (min-width: 820px) {
     .image-container {
       height: calc(600px * 1.2); } }
   .image-container div.img1 {
@@ -310,7 +311,7 @@ nav {
     height: 100%; }
 
 #projects {
-  background-image: url("../images/section-images/IMG_3889_1.jpg");
+  background-image: url("../images/section-images/back.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed; }
@@ -319,7 +320,7 @@ nav {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: "dashboard" "directory" "gallery" "stylesheet" "form"; }
-    @media (min-width: 800px) {
+    @media (min-width: 820px) {
       #projects .grid {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -362,7 +363,7 @@ nav {
   height: 250px;
   width: 250px;
   margin: 50px auto 50px auto; }
-  @media (min-width: 800px) {
+  @media (min-width: 820px) {
     .project {
       height: 300px;
       width: 300px;
@@ -370,13 +371,13 @@ nav {
   .project h3 {
     margin: 0;
     font-size: 1.2rem; }
-    @media (min-width: 800px) {
+    @media (min-width: 820px) {
       .project h3 {
         font-size: 1.5rem; } }
   .project h4 {
     margin: 0;
     font-size: 0.8rem; }
-    @media (min-width: 800px) {
+    @media (min-width: 820px) {
       .project h4 {
         font-size: 1rem; } }
   .project p {
@@ -388,13 +389,13 @@ nav {
     display: inline-block;
     margin: 5px;
     font-size: 0.9rem; }
-    @media (min-width: 800px) {
+    @media (min-width: 820px) {
       .project a {
         font-size: 1rem; } }
   .project svg {
     width: 25px;
     height: 25px; }
-    @media (min-width: 800px) {
+    @media (min-width: 820px) {
       .project svg {
         width: 50px;
         height: 50px; } }
@@ -472,7 +473,7 @@ nav {
   background-color: #998200;
   height: 250px;
   width: 250px; }
-  @media (min-width: 800px) {
+  @media (min-width: 820px) {
     .front,
     .back,
     .right,
@@ -492,7 +493,7 @@ nav {
 
 .front {
   transform: translateZ(125px); }
-  @media (min-width: 800px) {
+  @media (min-width: 820px) {
     .front {
       transform: translateZ(150px); } }
 
@@ -500,7 +501,7 @@ nav {
   position: absolute;
   top: 0;
   transform: rotateY(180deg) translateZ(125px); }
-  @media (min-width: 800px) {
+  @media (min-width: 820px) {
     .back {
       transform: rotateY(180deg) translateZ(150px); } }
 
@@ -511,7 +512,7 @@ nav {
   transform-origin: right;
   padding: 10px;
   color: white; }
-  @media (min-width: 800px) {
+  @media (min-width: 820px) {
     .right {
       transform: rotateY(270deg) rotateX(180deg) translate3d(150px, 0, 0); } }
 
@@ -522,7 +523,7 @@ nav {
   transform-origin: left;
   padding: 10px;
   color: white; }
-  @media (min-width: 800px) {
+  @media (min-width: 820px) {
     .left {
       transform: rotateY(-270deg) rotateX(180deg) translate3d(-150px, 0, 0); } }
 
@@ -530,7 +531,7 @@ nav {
   position: absolute;
   top: 0;
   transform: rotateX(90deg) translateZ(125px); }
-  @media (min-width: 800px) {
+  @media (min-width: 820px) {
     .top {
       transform: rotateX(90deg) translateZ(150px); } }
 
@@ -538,7 +539,7 @@ nav {
   position: absolute;
   top: 0;
   transform: rotateX(-90deg) translateZ(-125px); }
-  @media (min-width: 800px) {
+  @media (min-width: 820px) {
     .bottom {
       transform: rotateX(90deg) translateZ(-150px); } }
 
