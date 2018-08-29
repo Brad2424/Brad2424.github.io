@@ -260,8 +260,12 @@ nav {
         margin-left: 10px;
         background-color: transparent; }
         nav li:hover {
+<<<<<<< HEAD
           background-color: rgba(153, 130, 1, 0.8);
           border: solid 1px white; } }
+=======
+          background-color: rgba(153, 130, 1, 0.8); } }
+>>>>>>> master
   nav span {
     color: white;
     text-transform: uppercase;
@@ -288,9 +292,13 @@ nav {
 @media (min-width: 820px) {
   .active {
     background-color: rgba(153, 130, 1, 0.8);
+<<<<<<< HEAD
     border-left: solid 1px white;
     border-right: solid 1px white;
     border-top: 1px solid white;
+=======
+    border-bottom: 3px solid white;
+>>>>>>> master
     transition: transform 0.3s;
     transform: scale(1.1); } }
 
