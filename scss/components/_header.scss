@@ -18,7 +18,7 @@ header {
         border-bottom: 2px solid $primary-color;
         font-size: 2rem;
         font-weight: bold;
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba(255, 255, 255, 0.6);
                     width: 100%;
         @include mq('small') {
             padding: 5px;
@@ -56,6 +56,19 @@ nav {
         color: white;
         position: fixed;
     }
+    span {     // My name at top of page 
+        color: white;
+        text-transform: uppercase;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding: 10px;
+        margin: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        @include mq('small') {
+            margin-left: $edgeGap;
+        }
+    }
     ul {
         list-style-type: none;
         padding: 0;
@@ -83,18 +96,6 @@ nav {
             &:hover {
                 background-color: $primary-color-faded;
             }
-        }
-    }
-    span {
-        color: white;
-        text-transform: uppercase;
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
-        padding: 10px;
-        margin: 10px;
-        font-size: 1.2rem;
-        @include mq('small') {
-            margin-left: $edgeGap;
         }
     }
     a {
