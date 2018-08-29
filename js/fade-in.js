@@ -28,7 +28,6 @@ function checkFadeIn() {
     } else {
       fadeInElement.classList.remove('active-fade-in');
     }
-    console.log('executed');
   });
 }
 
