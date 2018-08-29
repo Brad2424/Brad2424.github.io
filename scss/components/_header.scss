@@ -22,9 +22,7 @@ header {
                     width: 100%;
         @include mq('small') {
             padding: 5px;
-            position: absolute;
-            bottom: calc(#{$section-height} * 0.5);
-            margin: 0;
+            margin-top: 250px;
             width: 100%;
             font-size: 6rem;
         }
