@@ -18,7 +18,7 @@ const fadeInElements = document.querySelectorAll('.fade-in');
 function checkFadeIn() {
   fadeInElements.forEach(fadeInElement => {
     // upper part of the element
-    const slideInAt = (window.scrollY + window.innerHeight) - (fadeInElement.clientHeight / 10);
+    const slideInAt = (window.scrollY + window.innerHeight) - (fadeInElement.clientHeight / 200);
     // bottom of the element
     const elementBottom = fadeInElement.offsetTop + fadeInElement.clientHeight;
     const isHalfShown = slideInAt > fadeInElement.offsetTop;
