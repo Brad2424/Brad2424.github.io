@@ -94,7 +94,7 @@
 // 3d Transforms ---------------
 // -----------------------------
 .project {
-    perspective: 2000px;
+    perspective: 4000px;
     height: 250px;
     width: 250px;
     margin: 50px auto 50px auto;
@@ -153,7 +153,6 @@
     flex: 1;
 }
 
-
 // left-hand side cubes
 .directory .cube, .stylesheet .cube {
     transform-style: preserve-3d;
@@ -163,6 +162,9 @@
     }
     .back {
         box-shadow: 20px 10px 40px 10px rgba(0,0,0,.6);
+    }
+    .bottom {
+        border-left: none;
     }
     &:hover {
         animation: leftSpin 0.3s ease-in-out forwards;
@@ -184,6 +186,9 @@
     }
     .back {
         box-shadow: -20px 10px 40px 10px rgba(0,0,0,.6);
+    }
+    .bottom {
+        border-right: none;
     }
     &:hover {
         animation: rightSpin 0.3s ease-in-out forwards;
@@ -210,6 +215,9 @@
     .back {
         box-shadow: -20px 10px 40px 10px rgba(0,0,0,.6);
     }
+    .bottom {
+        border-right: none;
+    }
     &:hover {
         animation: rightSpin 0.3s ease-in-out forwards;
         @include mq('medium') {
@@ -235,6 +243,8 @@
     background-color: $primary-color-faded;
     height: 250px;
     width: 250px;
+    backface-visibility: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.7);
     @include mq('small') {
         height: 300px;
         width: 300px;
@@ -247,7 +257,7 @@
 
 .front {
     transform: translateZ(125px);
-    backface-visibility: hidden;
+    border: none;
     @include mq('small') {
         transform: translateZ(150px);
     }
