@@ -113,8 +113,6 @@ nav {
 .active {
     @include mq('small') {
         background-color: $primary-color-faded;
-        // border-left: solid 1px white;
-        // border-right: solid 1px white;
         border-bottom: 3px solid white;
         transition: transform 0.3s;
         transform: scale(1.1);
