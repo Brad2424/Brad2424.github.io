@@ -2,6 +2,11 @@
     @if $break == null {
         @error "`#{$break}` is not a valid breakpoint name.";
     }
+    @else if $break == 'xsmall' {
+        @media (min-width: $breakpoint-xsml) {
+            @content;
+        }
+    }
     @else if $break == 'small' {
         @media (min-width: $breakpoint-sml) {
             @content;

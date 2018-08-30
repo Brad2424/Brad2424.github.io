@@ -10,10 +10,13 @@
         align-items: center;
         width: 90%;
         margin: 10px auto;
-        @include mq('medium') {
+        @include mq('small') {
             flex-direction: row;
+            margin: 0 auto;
+        }
+        @include mq('medium') {
             width: 70%;
-            margin: 40px auto;
+            margin-bottom: 40px;
         }
     }
     img {
@@ -21,53 +24,89 @@
         order: 1;
         border-radius: 50%;
         border: solid 1px white;
-        height: 150px;
-        width: 150px;
+        height: 200px;
+        width: 200px;
         display: block;
         margin: auto; 
         flex: 1;
         margin-bottom: 20px;
         @include mq('small') {
-            height: 200px;
-            width: 200px;
             order: unset;
-        }
-        @include mq('medium') {
             height: 240px;
             width: 240px;
             margin: 20px;
         }
     }
-    // active class below in this section is for Javascript fade-in // 
-    .active-fade-in {
-        opacity: 1;
-    }
 }
-
+// -----------------------------
+// Javascript fade-in elements
+// -----------------------------
 .profile-picture {
     opacity: 0;
     transition: all 1s;
 }
-
 .introduction {
+    padding: 15px;
     order: 2;
     flex: 2;
     background-color: $primary-color-faded;
     border-radius: 10px;
-    font-size: 0.8rem;
     opacity: 0;
     transition: all 1s;
     @include mq('small') {
-        font-size: 1rem;
-    }
-    @include mq('medium') {
         order: unset;
+    }
+    //these spans are the skills
+    span {
+        padding: 7px;
+        margin-top: 5px;
     }
     p {
         font-family: 'Montserrat', sans-serif;
-        padding: 0;
-        @include mq('medium') {
-            padding: 10px;
-        }
+        margin: 0;
+        padding: 0px;
     }
+}
+//active styling for the above fade-in elements
+.active-fade-in {
+    opacity: 1;
+}
+
+// -----------------------------
+// Skill styling
+// -----------------------------
+.skills {
+    margin-top: 10px;
+}
+.html {
+    @extend %skill;
+    background-color: rgb(142, 142, 255);
+}
+.css {
+    @extend %skill;
+    background-color: rgb(255, 139, 139);
+}
+.javascript {
+    @extend %skill;
+    background-color: rgb(121, 56, 115);
+}
+.ajax {
+    @extend %skill;
+    background-color: rgb(255, 153, 0);
+}
+.jquery {
+    @extend %skill;
+    background-color: rgb(46, 122, 2);
+}
+.sass {
+    @extend %skill;
+    background-color: rgb(1, 105, 91);
+}
+.svg {
+    @extend %skill;
+    background-color: rgb(0, 0, 0);
+}
+.json {
+    @extend %skill;
+    background-color: rgb(255, 0, 0);
 }

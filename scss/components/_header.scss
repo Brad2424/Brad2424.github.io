@@ -19,7 +19,7 @@ header {
         font-size: 2rem;
         font-weight: bold;
         background-color: rgba(255, 255, 255, 0.6);
-                    width: 100%;
+        width: 100%;
         @include mq('small') {
             padding: 5px;
             margin-top: 250px;
@@ -27,6 +27,7 @@ header {
             font-size: 6rem;
         }
     }
+    //html symbols in heading
     .unicode {
         display: inline-block;
         font-size: 2rem;
@@ -40,7 +41,7 @@ header {
 }
 
 // --------------------------
-// Menu Spy plugin for navbar
+// Navbar
 // --------------------------
 nav {
     background-color: transparent;
@@ -56,7 +57,9 @@ nav {
         color: white;
         position: fixed;
     }
-    span {     // My name at top of page 
+
+    // My name at top of page 
+    span {
         color: white;
         text-transform: uppercase;
         border-top: 1px solid white;
@@ -64,7 +67,6 @@ nav {
         padding: 10px;
         margin: 10px;
         font-size: 1.2rem;
-        font-weight: bold;
         @include mq('small') {
             margin-left: $edgeGap;
         }
@@ -106,11 +108,13 @@ nav {
         font-size: 1.2rem;
         @include mq('small') {
             display: inline-block;
-            font-size: 1.2rem;
             padding: 5px 10px;
         }
     }
 }
+// --------------------------
+// Menu Spy plugin for navbar
+// --------------------------
 .active {
     @include mq('small') {
         background-color: $primary-color-faded;
@@ -119,10 +123,10 @@ nav {
         transform: scale(1.1);
     }
 }
+
 // --------------------------
 // Moving images on scroll
 // --------------------------
-
 .image-container {
     flex: 1;
     overflow: hidden;
