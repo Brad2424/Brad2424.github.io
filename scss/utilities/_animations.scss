@@ -78,3 +78,12 @@
         transform: rotateX(0deg) rotateY(0deg);
     }
 }
+
+@keyframes letters {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
+}

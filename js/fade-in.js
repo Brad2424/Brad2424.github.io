@@ -25,8 +25,6 @@ function checkFadeIn() {
     const isNotScrolledPast = window.scrollY < elementBottom;
     if (isHalfShown && isNotScrolledPast) {
       fadeInElement.classList.add('active-fade-in');
-    } else {
-      fadeInElement.classList.remove('active-fade-in');
     }
   });
 }

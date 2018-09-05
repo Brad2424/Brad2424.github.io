@@ -4,13 +4,6 @@
   display: inline-block;
   font-family: 'Montserrat', sans-serif; }
 
-.project button.switch#view #switchCircle {
-  border-radius: 50%;
-  width: 29px;
-  height: 29px;
-  position: relative;
-  transition: 0.1s ease; }
-
 @keyframes leftSpin {
   from {
     transform-origin: 50% 50%;
@@ -59,6 +52,11 @@
   to {
     transform-origin: 50% 50%;
     transform: rotateX(0deg) rotateY(0deg); } }
+@keyframes letters {
+  from {
+    opacity: 0.3; }
+  to {
+    opacity: 1; } }
 * {
   box-sizing: border-box;
   font-family: 'Inconsolata', monospace;
@@ -73,14 +71,16 @@ body {
   text-align: center;
   overflow-x: hidden; }
 
+section, footer {
+  border-top: 1px solid #998200; }
+
 h2 {
   color: #998200;
   font-size: 2rem;
   margin: 20px;
   padding: 5px 10px;
   background-color: rgba(255, 255, 255, 0.7);
-  display: inline-block;
-  text-transform: uppercase; }
+  display: inline-block; }
   @media (min-width: 820px) {
     h2 {
       font-size: 3rem; } }
@@ -134,7 +134,7 @@ h2 {
   padding: 15px;
   order: 2;
   flex: 2;
-  background-color: rgba(153, 130, 1, 0.8);
+  background-color: rgba(153, 130, 1, 0.7);
   border-radius: 10px;
   opacity: 0;
   transition: all 1s; }
@@ -219,10 +219,11 @@ footer {
     text-align: center;
     padding: 5px;
     font-size: 0.9rem;
-    font-weight: bold; }
+    font-weight: bold;
+    text-transform: uppercase; }
 
 header {
-  background-image: url("../images/section-images/Back.png");
+  background-image: url("../images/section-images/Back_color.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
@@ -237,8 +238,8 @@ header {
     padding: 10px;
     z-index: 1000;
     color: #998200;
-    border-top: 2px solid #998200;
-    border-bottom: 2px solid #998200;
+    border-top: 1px solid #998200;
+    border-bottom: 1px solid #998200;
     font-size: 2rem;
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.6);
@@ -252,12 +253,11 @@ header {
   header .unicode {
     display: inline-block;
     font-size: 2rem;
-    color: rgba(153, 130, 1, 0.8);
+    color: #998200;
     margin: 0 5px; }
     @media (min-width: 820px) {
       header .unicode {
-        font-size: 5rem;
-        color: rgba(153, 130, 1, 0.8); } }
+        font-size: 5rem; } }
 
 nav {
   background-color: transparent;
@@ -276,8 +276,6 @@ nav {
   nav span {
     color: white;
     text-transform: uppercase;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
     padding: 10px;
     margin: 10px;
     font-size: 1.2rem; }
@@ -288,7 +286,7 @@ nav {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width: 80%;
+    width: 90%;
     z-index: 1000; }
     @media (min-width: 820px) {
       nav ul {
@@ -297,8 +295,7 @@ nav {
         width: initial; } }
   nav li {
     margin: 5px;
-    background-color: rgba(153, 130, 1, 0.8);
-    text-transform: uppercase;
+    background-color: rgba(153, 130, 1, 0.7);
     border: 1px solid white; }
     @media (min-width: 820px) {
       nav li {
@@ -309,7 +306,7 @@ nav {
         margin-left: 10px;
         background-color: transparent; }
         nav li:hover {
-          background-color: rgba(153, 130, 1, 0.8); } }
+          background-color: rgba(153, 130, 1, 0.7); } }
   nav a {
     padding: 10px;
     text-decoration: none;
@@ -323,7 +320,7 @@ nav {
 
 @media (min-width: 820px) {
   .active {
-    background-color: rgba(153, 130, 1, 0.8);
+    background-color: rgba(153, 130, 1, 0.7);
     border-bottom: 3px solid white;
     transition: transform 0.3s;
     transform: scale(1.1); } }
@@ -353,7 +350,7 @@ nav {
     left: 0; }
 
 #projects {
-  background-image: url("../images/section-images/Back.png");
+  background-image: url("../images/section-images/Back_color.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed; }
@@ -445,19 +442,6 @@ nav {
   .project .flex {
     display: flex;
     flex-direction: column; }
-  .project button.switch {
-    border-radius: 30px;
-    display: inline-flex;
-    padding: 2px;
-    font-size: 0.9em;
-    margin-right: 20px; }
-    .project button.switch span {
-      padding: 5px 0;
-      display: inline-block;
-      margin: auto 0;
-      font-weight: 600; }
-    .project button.switch#view #switchCircle {
-      left: 29px; }
 
 .flex-svg-link {
   display: flex;
@@ -532,7 +516,7 @@ nav {
 .left,
 .top,
 .bottom {
-  background-color: rgba(153, 130, 1, 0.8);
+  background-color: rgba(153, 130, 1, 0.7);
   height: 250px;
   width: 250px;
   backface-visibility: hidden;
