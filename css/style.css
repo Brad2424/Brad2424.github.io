@@ -75,15 +75,16 @@ section, footer {
   border-top: 1px solid #998200; }
 
 h2 {
-  color: #998200;
+  color: white;
+  text-shadow: 1px 1px #998200, 2px 2px #998200, 3px 3px #998200, 4px 4px #998200, 5px 5px #998200, 6px 6px #998200, 7px 7px #998200, 8px 8px #998200;
   font-size: 2rem;
   margin: 20px;
   padding: 5px 10px;
-  background-color: rgba(255, 255, 255, 0.7);
-  display: inline-block; }
+  display: inline-block;
+  text-transform: uppercase; }
   @media (min-width: 820px) {
     h2 {
-      font-size: 3rem; } }
+      font-size: 3.5rem; } }
 
 #aboutMe {
   background-image: url("../images/section-images/IMG_1903.JPG");
@@ -295,8 +296,9 @@ nav {
         width: initial; } }
   nav li {
     margin: 5px;
-    background-color: rgba(153, 130, 1, 0.7);
-    border: 1px solid white; }
+    background-color: #998200;
+    border: 1px solid white;
+    text-transform: uppercase; }
     @media (min-width: 820px) {
       nav li {
         border-top: 1px solid transparent;
@@ -306,7 +308,7 @@ nav {
         margin-left: 10px;
         background-color: transparent; }
         nav li:hover {
-          background-color: rgba(153, 130, 1, 0.7); } }
+          background-color: #998200; } }
   nav a {
     padding: 10px;
     text-decoration: none;
@@ -320,7 +322,7 @@ nav {
 
 @media (min-width: 820px) {
   .active {
-    background-color: rgba(153, 130, 1, 0.7);
+    background-color: #998200;
     border-bottom: 3px solid white;
     transition: transform 0.3s;
     transform: scale(1.1); } }
