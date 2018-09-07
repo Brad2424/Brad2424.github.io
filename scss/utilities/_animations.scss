@@ -78,7 +78,28 @@
         transform: rotateX(0deg) rotateY(0deg);
     }
 }
-
+@-webkit-keyframes letters {
+    0% {
+        content: '0';
+        opacity: 1;
+    }
+    25% {
+        content: '1';
+        opacity: 0;
+    }
+    50% {
+        content: '0';
+        opacity: 1;
+    }
+    75% {
+        content: '1';
+        opacity: 0;
+    }
+    100% {
+        content: attr(data-letter);
+        opacity: 1;
+    }
+}
 @keyframes letters {
     0% {
         content: '0';
@@ -97,11 +118,33 @@
         opacity: 0;
     }
     100% {
-        content: inherit;
+        content: attr(data-letter);
         opacity: 1;
     }
 }
 
+@-webkit-keyframes letters2 {
+    0% {
+        content: '1';
+        opacity: 1;
+    }
+    25% {
+        content: '0';
+        opacity: 0;
+    }
+    50% {
+        content: '1';
+        opacity: 1;
+    }
+    75% {
+        content: '0';
+        opacity: 0;
+    }
+    100% {
+        content: attr(data-letter);
+        opacity: 1;
+    }
+}
 @keyframes letters2 {
     0% {
         content: '1';
@@ -120,7 +163,7 @@
         opacity: 0;
     }
     100% {
-        content: inherit;
+        content: attr(data-letter);
         opacity: 1;
     }
 }
