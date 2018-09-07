@@ -287,43 +287,43 @@ header {
         font-size: 5rem; } }
   header #letter1::before {
     content: 'W';
-    animation: letters 4s 0.1s ease-out forwards; }
+    -webkit-animation: letters 4s 0.1s ease-out forwards; }
   header #letter2::before {
     content: 'e';
-    animation: letters2 4s 0.8s ease-out forwards; }
+    -webkit-animation: letters2 4s 0.8s ease-out forwards; }
   header #letter3::before {
     content: 'b';
-    animation: letters 4s 0.3s ease-out forwards; }
+    -webkit-animation: letters 4s 0.3s ease-out forwards; }
   header #letter4::before {
     content: '-';
-    animation: letters2 4s 0.7s ease-out forwards; }
+    -webkit-animation: letters2 4s 0.7s ease-out forwards; }
   header #letter5::before {
     content: 'd';
-    animation: letters 4s 0.6s ease-out forwards; }
+    -webkit-animation: letters 4s 0.6s ease-out forwards; }
   header #letter6::before {
     content: 'e';
-    animation: letters2 4s 0.5s ease-out forwards; }
+    -webkit-animation: letters2 4s 0.5s ease-out forwards; }
   header #letter7::before {
     content: 'v';
-    animation: letters 4s 0.8s ease-out forwards; }
+    -webkit-animation: letters 4s 0.8s ease-out forwards; }
   header #letter8::before {
     content: 'e';
-    animation: letters2 4s 0.1s ease-out forwards; }
+    -webkit-animation: letters2 4s 0.1s ease-out forwards; }
   header #letter9::before {
     content: 'l';
-    animation: letters 4s 0.7s ease-out forwards; }
+    -webkit-animation: letters 4s 0.7s ease-out forwards; }
   header #letter10::before {
     content: 'o';
-    animation: letters2 4s 0.2s ease-out forwards; }
+    -webkit-animation: letters2 4s 0.2s ease-out forwards; }
   header #letter11::before {
     content: 'p';
-    animation: letters 4s 0.6s ease-out forwards; }
+    -webkit-animation: letters 4s 0.6s ease-out forwards; }
   header #letter12::before {
     content: 'e';
-    animation: letters2 4s 0.8s ease-out forwards; }
+    -webkit-animation: letters2 4s 0.8s ease-out forwards; }
   header #letter13::before {
     content: 'r';
-    animation: letters 4s 0.4s ease-out forwards; }
+    -webkit-animation: letters 4s 0.4s ease-out forwards; }
 
 nav {
   background-color: transparent;
