@@ -10,6 +10,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 </head>
 <body>
+    <div id="preloadWrapper">
+        <div id="loader"></div>
+    </div>
     <header id="top">
         <nav>
             <span>Bradley Murchison</span>
@@ -320,6 +323,11 @@
             </footer>
         </section>
     </main>
+<script>
+    document.addEventListener("DOMContentLoaded", function(e) { 
+        document.body.classList.add('loaded');
+});
+</script>
 <script src="js/menuspy-min.js"></script>
     <script>
         const navBar = document.querySelector('.navBar');
