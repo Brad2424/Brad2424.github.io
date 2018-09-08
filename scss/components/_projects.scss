@@ -33,14 +33,6 @@
             "gallery"
             "stylesheet"
             "form";
-        @include mq('xsmall') {
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            grid-template-areas: 
-                "directory directory dashboard dashboard"
-                "stylesheet stylesheet gallery gallery"
-                "form form form form";
-        }
         @include mq('small') {
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(3, 1fr);
@@ -65,54 +57,80 @@
 // -----------------------------
 .project {
     perspective: 4000px;
-    height: 250px;
-    width: 250px;
-    margin: 50px auto 50px auto;
+    height: 210px;
+    width: 210px;
+    margin: 50px auto 70px auto;
     @include mq('small') {
-        height: 300px;
-        width: 300px;
-        margin: 50px auto 50px auto;
+        height: 240px;
+        width: 240px;
+    }
+    @include mq('large') {
+        height: 290px;
+        width: 290px;
     }
     h4 {
         margin: 0;
-        font-size: 1.2rem;
+        font-size: 1rem;
         @include mq('small') {
+            font-size: 1.2rem;
+        }
+        @include mq('large') {
             font-size: 1.5rem;
         }
     }
     h5 {
         margin: 0;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         @include mq('small') {
+            font-size: 0.8rem;
+        }
+        @include mq('large') {
             font-size: 1rem;
         }
     }
     p{
         margin: 10px 0 0 0;
-        font-size: 0.7rem;
+        font-size: 0.5rem;
         font-family: 'Montserrat', sans-serif;
+        @include mq('small') {
+            font-size: 0.6rem;
+        }
+        @include mq('large') {
+            font-size: 0.7rem;
+        }
     }
     a {
         color: white;
         display: inline-block;
         margin: 5px;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         @include mq('small') {
+            font-size: 0.9rem;
+        }
+        @include mq('large') {
             font-size: 1rem;
         }
     }
     svg {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
         @include mq('small') {
-            width: 50px;
-            height: 50px;
+            width: 30px;
+            height: 30px;
+        }
+        @include mq('large') {
+            width: 40px;
+            height: 40px;
         }
     }
     div.skills {
-        font-size: 0.5rem;
+        font-size: 0.4rem;
+        margin-top: 5px;
         @include mq('small') {
-            font-size: 0.7rem;
+            font-size: 0.5rem;
+        }
+        @include mq('large') {
+            font-size: 0.6rem;
         }
     }
     // class below is to center align all information in cube //
@@ -169,6 +187,9 @@
 .dashboard .cube {
     transform-style: preserve-3d;
     animation: rightReverse 0.4s ease-in-out forwards;
+    @include mq('large') {
+        animation: centerReverse 0.4s ease-in-out forwards;
+    }
     .back {
         box-shadow: -20px 10px 40px 10px rgba(0,0,0,.6);
     }
@@ -177,6 +198,9 @@
     }
     &:hover {
         animation: rightSpin 0.4s ease-in-out forwards;
+        @include mq('large') {
+            animation: centerSpin 0.4s ease-in-out forwards;
+        }
         .back {
             box-shadow: none;
         }
@@ -190,13 +214,17 @@
 .top,
 .bottom {
     background-color: $primary-color-faded;
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     backface-visibility: hidden;
     border: 2px solid rgba(255, 255, 255, 0.7);
     @include mq('small') {
-        height: 300px;
-        width: 300px;
+        height: 240px;
+        width: 240px;
+    }
+    @include mq('large') {
+        height: 280px;
+        width: 280px;
     }
     img {
         height: 100%;
@@ -205,58 +233,76 @@
 }
 
 .front {
-    transform: translateZ(125px);
+    transform: translateZ(100px);
     border: none;
     @include mq('small') {
-        transform: translateZ(150px);
+        transform: translateZ(120px);
+    }
+    @include mq('large') {
+        transform: translateZ(140px);
     }
 }
 .back {
     position: absolute;
     top: 0;
-    transform: rotateY(180deg) translateZ(125px);
+    transform: rotateY(180deg) translateZ(100px);
     @include mq('small') {
-        transform: rotateY(180deg) translateZ(150px);
+        transform: rotateY(180deg) translateZ(120px);
+    }
+    @include mq('large') {
+        transform: rotateY(180deg) translateZ(140px);
     }
 }
 .right {
     position: absolute;
     top: 0;
-	transform: rotateY(270deg) rotateX(180deg) translate3d(125px, 0, 0);
+	transform: rotateY(270deg) rotateX(180deg) translate3d(100px, 0, 0);
     transform-origin: right;
     padding: 10px; // padding for the informtion about project //
     color: white;
     @include mq('small') {
-        transform: rotateY(270deg) rotateX(180deg) translate3d(150px, 0, 0);
+        transform: rotateY(270deg) rotateX(180deg) translate3d(120px, 0, 0);
+    }
+    @include mq('large') {
+        transform: rotateY(270deg) rotateX(180deg) translate3d(140px, 0, 0);
     }
 }
 
 .left {
     position: absolute;
     top: 0;
-	transform: rotateY(-270deg) rotateX(180deg) translate3d(-125px, 0, 0);
+	transform: rotateY(-270deg) rotateX(180deg) translate3d(-100px, 0, 0);
     transform-origin: left;
     padding: 10px; // padding for the informtion about project //
     color: white;
     @include mq('small') {
-        transform: rotateY(-270deg) rotateX(180deg) translate3d(-150px, 0, 0);
+        transform: rotateY(-270deg) rotateX(180deg) translate3d(-120px, 0, 0);
+    }
+    @include mq('large') {
+        transform: rotateY(-270deg) rotateX(180deg) translate3d(-140px, 0, 0);
     }
 }
 
 .top {
     position: absolute;
     top: 0;
-    transform: rotateX(90deg) translateZ(125px);
+    transform: rotateX(90deg) translateZ(100px);
     @include mq('small') {
-        transform: rotateX(90deg) translateZ(150px);
+        transform: rotateX(90deg) translateZ(120px);
+    }
+    @include mq('large') {
+        transform: rotateX(90deg) translateZ(140px);
     }
 }
 .bottom {
     position: absolute;
     top: 0;
-    transform: rotateX(-90deg) translateZ(125px);
+    transform: rotateX(-90deg) translateZ(100px);
     @include mq('small') {
-        transform: rotateX(-90deg) translateZ(150px);
+        transform: rotateX(-90deg) translateZ(120px);
+    }
+    @include mq('large') {
+        transform: rotateX(-90deg) translateZ(140px);
     }
 }
 

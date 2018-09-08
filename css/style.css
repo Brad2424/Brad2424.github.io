@@ -7,51 +7,49 @@
 @keyframes leftSpin {
   from {
     transform-origin: 50% 50%;
-    transform: rotateX(6deg) rotateY(6deg); }
+    transform: rotateX(6deg) rotateY(6deg) scaleY(1) scaleZ(1);
+    z-index: 0; }
   to {
     transform-origin: 50% 50%;
-    transform: rotateX(-180deg) rotateY(-270deg) translate3d(0px, 40px, 0px);
-    zoom: 120%; } }
+    transform: rotateX(-180deg) rotateY(-270deg) scaleY(1.5) scaleZ(1.5);
+    z-index: 1000; } }
 @keyframes leftReverse {
   from {
     transform-origin: 50% 50%;
-    transform: rotateX(-180deg) rotateY(-270deg) translate3d(0px, 40px, 0px);
-    zoom: 120%; }
+    transform: rotateX(-180deg) rotateY(-270deg) scaleY(1.5) scaleZ(1.5);
+    z-index: 1000; }
   to {
     transform-origin: 50% 50%;
-    transform: rotateX(6deg) rotateY(6deg); } }
+    transform: rotateX(6deg) rotateY(6deg) scaleY(1) scaleZ(1);
+    z-index: 0; } }
 @keyframes rightSpin {
   from {
     transform-origin: 50% 50%;
-    transform: rotateX(6deg) rotateY(-6deg); }
+    transform: rotateX(6deg) rotateY(-6deg) scaleY(1) scaleZ(1); }
   to {
     transform-origin: 50% 50%;
-    transform: rotateX(180deg) rotateY(270deg) translate3d(0px, 40px, 0px);
-    zoom: 120%; } }
+    transform: rotateX(180deg) rotateY(270deg) scaleY(1.5) scaleZ(1.5); } }
 @keyframes rightReverse {
   from {
     transform-origin: 50% 50%;
-    transform: rotateX(180deg) rotateY(270deg) translate3d(0px, 40px, 0px);
-    zoom: 120%; }
+    transform: rotateX(180deg) rotateY(270deg) scaleY(1.5) scaleZ(1.5); }
   to {
     transform-origin: 50% 50%;
-    transform: rotateX(6deg) rotateY(-6deg); } }
+    transform: rotateX(6deg) rotateY(-6deg) scaleY(1) scaleZ(1); } }
 @keyframes centerSpin {
   from {
     transform-origin: 50% 50%;
-    transform: rotateX(0deg) rotateY(0deg); }
+    transform: rotateX(0deg) rotateY(0deg) scaleY(1) scaleZ(1); }
   to {
     transform-origin: 50% 50%;
-    transform: rotateX(180deg) rotateY(-90deg) translate3d(0px, 40px, 0px);
-    zoom: 120%; } }
+    transform: rotateX(180deg) rotateY(-90deg) scaleY(1.5) scaleZ(1.5); } }
 @keyframes centerReverse {
   from {
     transform-origin: 50% 50%;
-    transform: rotateX(180deg) rotateY(-90deg) translate3d(0px, 40px, 0px);
-    zoom: 120%; }
+    transform: rotateX(180deg) rotateY(-90deg) scaleY(1.5) scaleZ(1.5); }
   to {
     transform-origin: 50% 50%;
-    transform: rotateX(0deg) rotateY(0deg); } }
+    transform: rotateX(0deg) rotateY(0deg) scaleY(1) scaleZ(1); } }
 @-webkit-keyframes letters {
   0% {
     content: '0';
@@ -149,7 +147,7 @@ h2 {
   margin: 20px;
   padding: 5px 10px;
   display: inline-block; }
-  @media (min-width: 820px) {
+  @media (min-width: 768px) {
     h2 {
       font-size: 3.5rem; } }
 
@@ -165,7 +163,7 @@ h2 {
     align-items: center;
     width: 90%;
     margin: 10px auto; }
-    @media (min-width: 820px) {
+    @media (min-width: 768px) {
       #aboutMe .container {
         flex-direction: row;
         margin: 0 auto; } }
@@ -184,7 +182,7 @@ h2 {
     margin: auto;
     flex: 1;
     margin-bottom: 20px; }
-    @media (min-width: 820px) {
+    @media (min-width: 768px) {
       #aboutMe img {
         order: unset;
         height: 240px;
@@ -194,7 +192,7 @@ h2 {
 .profile-picture {
   opacity: 0;
   transition: all 1s; }
-  @media (min-width: 820px) {
+  @media (min-width: 768px) {
     .profile-picture {
       transform: translateX(100%); } }
 
@@ -206,7 +204,7 @@ h2 {
   border-radius: 10px;
   opacity: 0;
   transition: all 1s; }
-  @media (min-width: 820px) {
+  @media (min-width: 768px) {
     .introduction {
       order: unset;
       transform: translateX(-100%); } }
@@ -298,7 +296,7 @@ header {
   height: 550px;
   display: flex;
   flex-direction: column; }
-  @media (min-width: 820px) {
+  @media (min-width: 768px) {
     header {
       height: calc(550px * 1.4); } }
   header h1 {
@@ -312,7 +310,7 @@ header {
     background-color: rgba(255, 255, 255, 0.6);
     width: 100%;
     text-transform: uppercase; }
-    @media (min-width: 820px) {
+    @media (min-width: 768px) {
       header h1 {
         padding: 5px;
         margin-top: 250px;
@@ -323,7 +321,7 @@ header {
     font-size: 2rem;
     color: #998200;
     margin: 0 5px; }
-    @media (min-width: 820px) {
+    @media (min-width: 768px) {
       header .unicode {
         font-size: 5rem; } }
   header #letter1::before {
@@ -388,7 +386,7 @@ nav {
   width: 100%;
   max-width: 1400px;
   z-index: 10000; }
-  @media (min-width: 820px) {
+  @media (min-width: 768px) {
     nav {
       flex-direction: row;
       color: white;
@@ -405,7 +403,7 @@ nav {
     position: relative;
     top: -55px;
     animation: dropdown 1s ease-out forwards; }
-    @media (min-width: 820px) {
+    @media (min-width: 768px) {
       nav span {
         margin-left: 20px; } }
   nav ul {
@@ -414,7 +412,7 @@ nav {
     margin: 0;
     width: 90%;
     z-index: 1000; }
-    @media (min-width: 820px) {
+    @media (min-width: 768px) {
       nav ul {
         position: relative;
         top: -55px;
@@ -425,7 +423,7 @@ nav {
     margin: 5px;
     background-color: rgba(153, 130, 1, 0.7);
     border: 1px solid white; }
-    @media (min-width: 820px) {
+    @media (min-width: 768px) {
       nav li {
         border: 1px solid transparent;
         display: inline-block;
@@ -446,14 +444,14 @@ nav {
     color: white;
     display: block;
     font-size: 1.2rem; }
-    @media (min-width: 820px) {
+    @media (min-width: 768px) {
       nav a {
         display: inline-block;
         padding: 5px 10px;
         color: #998200;
         width: 89px; } }
 
-@media (min-width: 820px) {
+@media (min-width: 768px) {
   .active {
     background-color: white;
     border: 5px solid #998200;
@@ -468,7 +466,7 @@ nav {
   display: flex;
   position: absolute;
   height: 550px; }
-  @media (min-width: 820px) {
+  @media (min-width: 768px) {
     .image-container {
       height: calc(550px * 1.4); } }
   .image-container div.img1 {
@@ -497,13 +495,13 @@ nav {
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem; }
-    @media (min-width: 820px) {
+    @media (min-width: 768px) {
       #projects h3 {
         font-size: 1rem; } }
     #projects h3 a {
       color: white;
       font-size: 1rem; }
-      @media (min-width: 820px) {
+      @media (min-width: 768px) {
         #projects h3 a {
           font-size: 1.3rem; } }
   #projects .grid {
@@ -511,17 +509,12 @@ nav {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: "dashboard" "directory" "gallery" "stylesheet" "form"; }
-    @media (min-width: 640px) {
+    @media (min-width: 768px) {
       #projects .grid {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas: "directory directory dashboard dashboard" "stylesheet stylesheet gallery gallery" "form form form form"; } }
-    @media (min-width: 820px) {
-      #projects .grid {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: "directory directory dashboard dashboard" "stylesheet stylesheet gallery gallery" "form form form form"; } }
-    @media (min-width: 1280px) {
+    @media (min-width: 1350px) {
       #projects .grid {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 1fr 1fr;
@@ -529,50 +522,76 @@ nav {
 
 .project {
   perspective: 4000px;
-  height: 250px;
-  width: 250px;
-  margin: 50px auto 50px auto; }
-  @media (min-width: 820px) {
+  height: 210px;
+  width: 210px;
+  margin: 50px auto 70px auto; }
+  @media (min-width: 768px) {
     .project {
-      height: 300px;
-      width: 300px;
-      margin: 50px auto 50px auto; } }
+      height: 240px;
+      width: 240px; } }
+  @media (min-width: 1350px) {
+    .project {
+      height: 290px;
+      width: 290px; } }
   .project h4 {
     margin: 0;
-    font-size: 1.2rem; }
-    @media (min-width: 820px) {
+    font-size: 1rem; }
+    @media (min-width: 768px) {
+      .project h4 {
+        font-size: 1.2rem; } }
+    @media (min-width: 1350px) {
       .project h4 {
         font-size: 1.5rem; } }
   .project h5 {
     margin: 0;
-    font-size: 0.8rem; }
-    @media (min-width: 820px) {
+    font-size: 0.7rem; }
+    @media (min-width: 768px) {
+      .project h5 {
+        font-size: 0.8rem; } }
+    @media (min-width: 1350px) {
       .project h5 {
         font-size: 1rem; } }
   .project p {
     margin: 10px 0 0 0;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     font-family: 'Montserrat', sans-serif; }
+    @media (min-width: 768px) {
+      .project p {
+        font-size: 0.6rem; } }
+    @media (min-width: 1350px) {
+      .project p {
+        font-size: 0.7rem; } }
   .project a {
     color: white;
     display: inline-block;
     margin: 5px;
-    font-size: 0.9rem; }
-    @media (min-width: 820px) {
+    font-size: 0.8rem; }
+    @media (min-width: 768px) {
+      .project a {
+        font-size: 0.9rem; } }
+    @media (min-width: 1350px) {
       .project a {
         font-size: 1rem; } }
   .project svg {
-    width: 25px;
-    height: 25px; }
-    @media (min-width: 820px) {
+    width: 20px;
+    height: 20px; }
+    @media (min-width: 768px) {
       .project svg {
-        width: 50px;
-        height: 50px; } }
+        width: 30px;
+        height: 30px; } }
+    @media (min-width: 1350px) {
+      .project svg {
+        width: 40px;
+        height: 40px; } }
   .project div.skills {
-    font-size: 0.5rem; }
-    @media (min-width: 820px) {
+    font-size: 0.4rem;
+    margin-top: 5px; }
+    @media (min-width: 768px) {
       .project div.skills {
-        font-size: 0.7rem; } }
+        font-size: 0.5rem; } }
+    @media (min-width: 1350px) {
+      .project div.skills {
+        font-size: 0.6rem; } }
   .project .flex {
     display: flex;
     flex-direction: column; }
@@ -610,12 +629,18 @@ nav {
 .dashboard .cube {
   transform-style: preserve-3d;
   animation: rightReverse 0.4s ease-in-out forwards; }
+  @media (min-width: 1350px) {
+    .dashboard .cube {
+      animation: centerReverse 0.4s ease-in-out forwards; } }
   .dashboard .cube .back {
     box-shadow: -20px 10px 40px 10px rgba(0, 0, 0, 0.6); }
   .dashboard .cube .bottom {
     border-right: none; }
   .dashboard .cube:hover {
     animation: rightSpin 0.4s ease-in-out forwards; }
+    @media (min-width: 1350px) {
+      .dashboard .cube:hover {
+        animation: centerSpin 0.4s ease-in-out forwards; } }
     .dashboard .cube:hover .back {
       box-shadow: none; }
 
@@ -626,19 +651,28 @@ nav {
 .top,
 .bottom {
   background-color: rgba(153, 130, 1, 0.7);
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
   backface-visibility: hidden;
   border: 2px solid rgba(255, 255, 255, 0.7); }
-  @media (min-width: 820px) {
+  @media (min-width: 768px) {
     .front,
     .back,
     .right,
     .left,
     .top,
     .bottom {
-      height: 300px;
-      width: 300px; } }
+      height: 240px;
+      width: 240px; } }
+  @media (min-width: 1350px) {
+    .front,
+    .back,
+    .right,
+    .left,
+    .top,
+    .bottom {
+      height: 280px;
+      width: 280px; } }
   .front img,
   .back img,
   .right img,
@@ -649,57 +683,75 @@ nav {
     width: 100%; }
 
 .front {
-  transform: translateZ(125px);
+  transform: translateZ(100px);
   border: none; }
-  @media (min-width: 820px) {
+  @media (min-width: 768px) {
     .front {
-      transform: translateZ(150px); } }
+      transform: translateZ(120px); } }
+  @media (min-width: 1350px) {
+    .front {
+      transform: translateZ(140px); } }
 
 .back {
   position: absolute;
   top: 0;
-  transform: rotateY(180deg) translateZ(125px); }
-  @media (min-width: 820px) {
+  transform: rotateY(180deg) translateZ(100px); }
+  @media (min-width: 768px) {
     .back {
-      transform: rotateY(180deg) translateZ(150px); } }
+      transform: rotateY(180deg) translateZ(120px); } }
+  @media (min-width: 1350px) {
+    .back {
+      transform: rotateY(180deg) translateZ(140px); } }
 
 .right {
   position: absolute;
   top: 0;
-  transform: rotateY(270deg) rotateX(180deg) translate3d(125px, 0, 0);
+  transform: rotateY(270deg) rotateX(180deg) translate3d(100px, 0, 0);
   transform-origin: right;
   padding: 10px;
   color: white; }
-  @media (min-width: 820px) {
+  @media (min-width: 768px) {
     .right {
-      transform: rotateY(270deg) rotateX(180deg) translate3d(150px, 0, 0); } }
+      transform: rotateY(270deg) rotateX(180deg) translate3d(120px, 0, 0); } }
+  @media (min-width: 1350px) {
+    .right {
+      transform: rotateY(270deg) rotateX(180deg) translate3d(140px, 0, 0); } }
 
 .left {
   position: absolute;
   top: 0;
-  transform: rotateY(-270deg) rotateX(180deg) translate3d(-125px, 0, 0);
+  transform: rotateY(-270deg) rotateX(180deg) translate3d(-100px, 0, 0);
   transform-origin: left;
   padding: 10px;
   color: white; }
-  @media (min-width: 820px) {
+  @media (min-width: 768px) {
     .left {
-      transform: rotateY(-270deg) rotateX(180deg) translate3d(-150px, 0, 0); } }
+      transform: rotateY(-270deg) rotateX(180deg) translate3d(-120px, 0, 0); } }
+  @media (min-width: 1350px) {
+    .left {
+      transform: rotateY(-270deg) rotateX(180deg) translate3d(-140px, 0, 0); } }
 
 .top {
   position: absolute;
   top: 0;
-  transform: rotateX(90deg) translateZ(125px); }
-  @media (min-width: 820px) {
+  transform: rotateX(90deg) translateZ(100px); }
+  @media (min-width: 768px) {
     .top {
-      transform: rotateX(90deg) translateZ(150px); } }
+      transform: rotateX(90deg) translateZ(120px); } }
+  @media (min-width: 1350px) {
+    .top {
+      transform: rotateX(90deg) translateZ(140px); } }
 
 .bottom {
   position: absolute;
   top: 0;
-  transform: rotateX(-90deg) translateZ(125px); }
-  @media (min-width: 820px) {
+  transform: rotateX(-90deg) translateZ(100px); }
+  @media (min-width: 768px) {
     .bottom {
-      transform: rotateX(-90deg) translateZ(150px); } }
+      transform: rotateX(-90deg) translateZ(120px); } }
+  @media (min-width: 1350px) {
+    .bottom {
+      transform: rotateX(-90deg) translateZ(140px); } }
 
 .directory {
   grid-area: directory; }
