@@ -181,7 +181,7 @@
   scroll-behavior: smooth; }
 
 html {
-  background: #f0f0f0; }
+  background: gainsboro; }
 
 body {
   max-width: 1400px;
@@ -376,60 +376,73 @@ header {
     @media (min-width: 768px) {
       header .unicode {
         font-size: 5rem; } }
-  header #letter1::before {
-    content: 'W';
-    -webkit-animation: letters 4s 0.1s ease-out forwards;
-    animation: letters 4s 0.1s ease-out forwards; }
-  header #letter2::before {
-    content: 'e';
-    -webkit-animation: letters2 4s 0.8s ease-out forwards;
-    animation: letters2 4s 0.8s ease-out forwards; }
-  header #letter3::before {
-    content: 'b';
-    -webkit-animation: letters 4s 0.3s ease-out forwards;
-    animation: letters 4s 0.3s ease-out forwards; }
-  header #letter4::before {
-    content: '-';
-    -webkit-animation: letters2 4s 0.7s ease-out forwards;
-    animation: letters2 4s 0.7s ease-out forwards; }
-  header #letter5::before {
-    content: 'd';
-    -webkit-animation: letters 4s 0.6s ease-out forwards;
-    animation: letters 4s 0.6s ease-out forwards; }
-  header #letter6::before {
-    content: 'e';
-    -webkit-animation: letters2 4s 0.5s ease-out forwards;
-    animation: letters2 4s 0.5s ease-out forwards; }
-  header #letter7::before {
-    content: 'v';
-    -webkit-animation: letters 4s 0.8s ease-out forwards;
-    animation: letters 4s 0.8s ease-out forwards; }
-  header #letter8::before {
-    content: 'e';
-    -webkit-animation: letters2 4s 0.1s ease-out forwards;
-    animation: letters2 4s 0.1s ease-out forwards; }
-  header #letter9::before {
-    content: 'l';
-    -webkit-animation: letters 4s 0.7s ease-out forwards;
-    animation: letters 4s 0.7s ease-out forwards; }
-  header #letter10::before {
-    content: 'o';
-    -webkit-animation: letters2 4s 0.2s ease-out forwards;
-    animation: letters2 4s 0.2s ease-out forwards; }
-  header #letter11::before {
-    content: 'p';
-    -webkit-animation: letters 4s 0.6s ease-out forwards;
-    animation: letters 4s 0.6s ease-out forwards; }
-  header #letter12::before {
-    content: 'e';
-    -webkit-animation: letters2 4s 0.8s ease-out forwards;
-    animation: letters2 4s 0.8s ease-out forwards; }
-  header #letter13::before {
-    content: 'r';
-    -webkit-animation: letters 4s 0.4s ease-out forwards;
-    animation: letters 4s 0.4s ease-out forwards; }
 
-nav {
+.loaded #letter1::before {
+  content: 'W';
+  -webkit-animation: letters 4s 0.1s ease-out forwards;
+  animation: letters 4s 0.1s ease-out forwards; }
+
+.loaded #letter2::before {
+  content: 'e';
+  -webkit-animation: letters2 4s 0.8s ease-out forwards;
+  animation: letters2 4s 0.8s ease-out forwards; }
+
+.loaded #letter3::before {
+  content: 'b';
+  -webkit-animation: letters 4s 0.3s ease-out forwards;
+  animation: letters 4s 0.3s ease-out forwards; }
+
+.loaded #letter4::before {
+  content: '-';
+  -webkit-animation: letters2 4s 0.7s ease-out forwards;
+  animation: letters2 4s 0.7s ease-out forwards; }
+
+.loaded #letter5::before {
+  content: 'd';
+  -webkit-animation: letters 4s 0.6s ease-out forwards;
+  animation: letters 4s 0.6s ease-out forwards; }
+
+.loaded #letter6::before {
+  content: 'e';
+  -webkit-animation: letters2 4s 0.5s ease-out forwards;
+  animation: letters2 4s 0.5s ease-out forwards; }
+
+.loaded #letter7::before {
+  content: 'v';
+  -webkit-animation: letters 4s 0.8s ease-out forwards;
+  animation: letters 4s 0.8s ease-out forwards; }
+
+.loaded #letter8::before {
+  content: 'e';
+  -webkit-animation: letters2 4s 0.1s ease-out forwards;
+  animation: letters2 4s 0.1s ease-out forwards; }
+
+.loaded #letter9::before {
+  content: 'l';
+  -webkit-animation: letters 4s 0.7s ease-out forwards;
+  animation: letters 4s 0.7s ease-out forwards; }
+
+.loaded #letter10::before {
+  content: 'o';
+  -webkit-animation: letters2 4s 0.2s ease-out forwards;
+  animation: letters2 4s 0.2s ease-out forwards; }
+
+.loaded #letter11::before {
+  content: 'p';
+  -webkit-animation: letters 4s 0.6s ease-out forwards;
+  animation: letters 4s 0.6s ease-out forwards; }
+
+.loaded #letter12::before {
+  content: 'e';
+  -webkit-animation: letters2 4s 0.8s ease-out forwards;
+  animation: letters2 4s 0.8s ease-out forwards; }
+
+.loaded #letter13::before {
+  content: 'r';
+  -webkit-animation: letters 4s 0.4s ease-out forwards;
+  animation: letters 4s 0.4s ease-out forwards; }
+
+.loaded nav {
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -439,11 +452,11 @@ nav {
   max-width: 1400px;
   z-index: 1000; }
   @media (min-width: 768px) {
-    nav {
+    .loaded nav {
       flex-direction: row;
       color: white;
       position: fixed; } }
-  nav span {
+  .loaded nav span {
     color: white;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
@@ -456,59 +469,59 @@ nav {
     top: -55px;
     animation: dropdown 1s 0.5s ease-out forwards; }
     @media (min-width: 768px) {
-      nav span {
+      .loaded nav span {
         margin-left: 20px; } }
-  nav ul {
+  .loaded nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     width: 90%; }
     @media (min-width: 768px) {
-      nav ul {
+      .loaded nav ul {
         position: relative;
         top: -55px;
         margin-right: 20px;
         margin-left: auto;
         width: initial; } }
-  nav li {
+  .loaded nav li {
     margin: 5px;
     background-color: rgba(153, 130, 1, 0.7);
     border: 1px solid white; }
     @media (min-width: 768px) {
-      nav li {
+      .loaded nav li {
         border: 1px solid transparent;
         display: inline-block;
         background-color: rgba(255, 255, 255, 0.6); }
-        nav li#nav1 {
+        .loaded nav li#nav1 {
           animation: dropdown 1s 0.5s ease-out forwards; }
-        nav li#nav2 {
+        .loaded nav li#nav2 {
           animation: dropdown 1s 0.8s ease-out forwards; }
-        nav li#nav3 {
+        .loaded nav li#nav3 {
           animation: dropdown 1s 1.1s ease-out forwards; }
-        nav li#nav4 {
+        .loaded nav li#nav4 {
           animation: dropdown 1s 1.4s ease-out forwards; }
-        nav li:hover {
+        .loaded nav li:hover {
           background-color: white; } }
-  nav a {
+  .loaded nav a {
     padding: 10px;
     text-decoration: none;
     color: white;
     display: block;
     font-size: 1.2rem; }
     @media (min-width: 768px) {
-      nav a {
+      .loaded nav a {
         display: inline-block;
         padding: 5px 10px;
         color: #998200;
         width: 89px; } }
 
 @media (min-width: 768px) {
-  .active {
+  .loaded .active {
     background-color: white;
     border: 5px solid #998200;
     transition: all 0.5s; } }
 
-.image-container {
+.loaded .image-container {
   flex: 1;
   overflow: hidden;
   width: 100%;
@@ -518,21 +531,21 @@ nav {
   position: absolute;
   height: 500px; }
   @media (min-width: 768px) {
-    .image-container {
+    .loaded .image-container {
       height: 750px; } }
-  .image-container div.img1 {
+  .loaded .image-container div.img1 {
     width: 50%;
     max-width: calc(1400px * 0.5);
     position: relative;
     left: 10%;
-    animation: fade-in 1s ease-out forwards; }
-  .image-container div.img2 {
+    animation: fade-in 0.25s ease-out forwards; }
+  .loaded .image-container div.img2 {
     width: 50%;
     max-width: calc(1400px * 0.5);
     position: relative;
     right: 10%;
-    animation: fade-in 1s ease-out forwards; }
-  .image-container img {
+    animation: fade-in 0.5s ease-out forwards; }
+  .loaded .image-container img {
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -831,9 +844,21 @@ nav {
   left: 0;
   height: 100%;
   width: 100%;
+  max-width: 1400px;
   z-index: 2000;
-  background: #968228;
+  background: #96823c;
   transition: all 1s; }
+  @media (min-width: 1400px) {
+    #preloadWrapper {
+      left: calc((100% - 1400px) / 2); } }
+  #preloadWrapper span {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 200px;
+    margin: -100px auto auto -100px;
+    font-size: 1.5rem;
+    color: white; }
 
 #loader {
   display: block;
@@ -843,35 +868,35 @@ nav {
   width: 200px;
   height: 200px;
   margin: -100px auto auto -100px;
-  border: 10px solid transparent;
+  border: 5px solid transparent;
   border-radius: 50%;
-  border-top-color: #c8c8c8;
+  border-top-color: white;
   animation: spinner 1s ease-in-out infinite;
   transition: all 1s; }
 
 #loader::before {
   content: '';
   position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  border: 10px solid transparent;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 5px solid transparent;
   border-radius: 50%;
-  border-top-color: #c8c8c8;
+  border-top-color: white;
   animation: spinner 2s ease-in-out infinite;
   transition: all 1s; }
 
 #loader::after {
   content: '';
   position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  border: 10px solid transparent;
+  top: 17px;
+  left: 17px;
+  right: 17px;
+  bottom: 17px;
+  border: 5px solid transparent;
   border-radius: 50%;
-  border-top-color: #c8c8c8;
+  border-top-color: white;
   animation: spinner 1.5s ease-in-out infinite;
   transition: all 1s; }
 

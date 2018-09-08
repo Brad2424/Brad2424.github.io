@@ -38,77 +38,77 @@ header {
             font-size: 5rem;
         }
     }
-    #letter1::before {
-        content: 'W';
-        -webkit-animation: letters 4s 0.1s ease-out forwards;
-        animation: letters 4s 0.1s ease-out forwards;
-    }
-    #letter2::before {
-        content: 'e';
-        -webkit-animation: letters2 4s 0.8s ease-out forwards;
-        animation: letters2 4s 0.8s ease-out forwards;
-    }
-    #letter3::before {
-        content: 'b';
-        -webkit-animation: letters 4s 0.3s ease-out forwards;
-        animation: letters 4s 0.3s ease-out forwards;
-    }
-    #letter4::before {
-        content: '-';
-        -webkit-animation: letters2 4s 0.7s ease-out forwards;
-        animation: letters2 4s 0.7s ease-out forwards;
-    }
-    #letter5::before {
-        content: 'd';
-        -webkit-animation: letters 4s 0.6s ease-out forwards;
-        animation: letters 4s 0.6s ease-out forwards;
-    }
-    #letter6::before {
-        content: 'e';
-        -webkit-animation: letters2 4s 0.5s ease-out forwards;
-        animation: letters2 4s 0.5s ease-out forwards;
-    }
-    #letter7::before {
-        content: 'v';
-        -webkit-animation: letters 4s 0.8s ease-out forwards;
-        animation: letters 4s 0.8s ease-out forwards;
-    }
-    #letter8::before {
-        content: 'e';
-        -webkit-animation: letters2 4s 0.1s ease-out forwards;
-        animation: letters2 4s 0.1s ease-out forwards;
-    }
-    #letter9::before {
-        content: 'l';
-        -webkit-animation: letters 4s 0.7s ease-out forwards;
-        animation: letters 4s 0.7s ease-out forwards;
-    }
-    #letter10::before {
-        content: 'o';
-        -webkit-animation: letters2 4s 0.2s ease-out forwards;
-        animation: letters2 4s 0.2s ease-out forwards;
-    }
-    #letter11::before {
-        content: 'p';
-        -webkit-animation: letters 4s 0.6s ease-out forwards;
-        animation: letters 4s 0.6s ease-out forwards;
-    }
-    #letter12::before {
-        content: 'e';
-        -webkit-animation: letters2 4s 0.8s ease-out forwards;
-        animation: letters2 4s 0.8s ease-out forwards;
-    }
-    #letter13::before {
-        content: 'r';
-        -webkit-animation: letters 4s 0.4s ease-out forwards;
-        animation: letters 4s 0.4s ease-out forwards;
-    }
+}
+.loaded #letter1::before {
+    content: 'W';
+    -webkit-animation: letters 4s 0.1s ease-out forwards;
+    animation: letters 4s 0.1s ease-out forwards;
+}
+.loaded #letter2::before {
+    content: 'e';
+    -webkit-animation: letters2 4s 0.8s ease-out forwards;
+    animation: letters2 4s 0.8s ease-out forwards;
+}
+.loaded #letter3::before {
+    content: 'b';
+    -webkit-animation: letters 4s 0.3s ease-out forwards;
+    animation: letters 4s 0.3s ease-out forwards;
+}
+.loaded #letter4::before {
+    content: '-';
+    -webkit-animation: letters2 4s 0.7s ease-out forwards;
+    animation: letters2 4s 0.7s ease-out forwards;
+}
+.loaded #letter5::before {
+    content: 'd';
+    -webkit-animation: letters 4s 0.6s ease-out forwards;
+    animation: letters 4s 0.6s ease-out forwards;
+}
+.loaded #letter6::before {
+    content: 'e';
+    -webkit-animation: letters2 4s 0.5s ease-out forwards;
+    animation: letters2 4s 0.5s ease-out forwards;
+}
+.loaded #letter7::before {
+    content: 'v';
+    -webkit-animation: letters 4s 0.8s ease-out forwards;
+    animation: letters 4s 0.8s ease-out forwards;
+}
+.loaded #letter8::before {
+    content: 'e';
+    -webkit-animation: letters2 4s 0.1s ease-out forwards;
+    animation: letters2 4s 0.1s ease-out forwards;
+}
+.loaded #letter9::before {
+    content: 'l';
+    -webkit-animation: letters 4s 0.7s ease-out forwards;
+    animation: letters 4s 0.7s ease-out forwards;
+}
+.loaded #letter10::before {
+    content: 'o';
+    -webkit-animation: letters2 4s 0.2s ease-out forwards;
+    animation: letters2 4s 0.2s ease-out forwards;
+}
+.loaded #letter11::before {
+    content: 'p';
+    -webkit-animation: letters 4s 0.6s ease-out forwards;
+    animation: letters 4s 0.6s ease-out forwards;
+}
+.loaded #letter12::before {
+    content: 'e';
+    -webkit-animation: letters2 4s 0.8s ease-out forwards;
+    animation: letters2 4s 0.8s ease-out forwards;
+}
+.loaded #letter13::before {
+    content: 'r';
+    -webkit-animation: letters 4s 0.4s ease-out forwards;
+    animation: letters 4s 0.4s ease-out forwards;
 }
 
 // --------------------------
 // Navbar
 // --------------------------
-nav {
+.loaded nav {
     background-color: transparent;
     display: flex;
     flex-direction: column;
@@ -195,7 +195,7 @@ nav {
 // --------------------------
 // Menu Spy plugin for navbar
 // --------------------------
-.active {
+.loaded .active {
     @include mq('small') {
         background-color: white;
         border: 5px solid $primary-color;
@@ -206,7 +206,7 @@ nav {
 // --------------------------
 // Moving images on scroll
 // --------------------------
-.image-container {
+.loaded .image-container {
     flex: 1;
     overflow: hidden;
     width: 100%;
@@ -224,14 +224,14 @@ nav {
             max-width: calc(#{$body-max-width} * 0.5);
             position: relative;
             left: 10%;
-            animation: fade-in 1s ease-out forwards;
+            animation: fade-in 0.25s ease-out forwards;
         }
         &2 {
             width: 50%;
             max-width: calc(#{$body-max-width} * 0.5);
             position: relative;
             right: 10%;
-            animation: fade-in 1s ease-out forwards;
+            animation: fade-in 0.5s ease-out forwards;
         }
     }
     img {
