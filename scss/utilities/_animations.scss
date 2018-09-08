@@ -78,6 +78,10 @@
         transform: rotateX(0deg) rotateY(0deg);
     }
 }
+
+// -----------------------------
+// 0 and 1 For Letters in Header
+// -----------------------------
 @-webkit-keyframes letters {
     0% {
         content: '0';
@@ -165,5 +169,23 @@
     100% {
         content: attr(data-letter);
         opacity: 1;
+    }
+}
+
+// -----------------------------
+// Name and NavBar in Header
+// -----------------------------
+@keyframes dropdown {
+    25% {
+        transform: translateY(-55px);
+    }
+    50% {
+        transform: translateY(80px);
+    }
+    75% {
+        transform: translateY(45px);
+    }
+    100% {
+        transform: translateY(55px); 
     }
 }

@@ -133,6 +133,9 @@ nav {
         padding: 10px;
         margin: 10px;
         font-size: 1.2rem;
+        position: relative;
+        top: -55px;
+        animation: dropdown 1s ease-out forwards;
         @include mq('small') {
             margin-left: $edgeGap;
         }
@@ -144,6 +147,8 @@ nav {
         width: 90%;
         z-index: 1000;
         @include mq('small') {
+            position: relative;
+            top: -55px;
             margin-right: $edgeGap;
             margin-left: auto;
             width: initial;
@@ -153,14 +158,24 @@ nav {
         margin: 5px;
         background-color: $primary-color-faded;
         border: 1px solid white;
-        // text-transform: uppercase;
         @include mq('small') {
-            border: 3px solid transparent;
+            border: 1px solid transparent;
             display: inline-block;
             background-color: rgba(255, 255, 255, 0.6);
+            &#nav1 {
+                animation: dropdown 1s 0.3s ease-out forwards;
+            }
+            &#nav2 {
+                animation: dropdown 1s 0.6s ease-out forwards;
+            }
+            &#nav3 {
+                animation: dropdown 1s 0.9s ease-out forwards;
+            }
+            &#nav4 {
+                animation: dropdown 1s 1.2s ease-out forwards;
+            }
             &:hover {
                 background-color: white;
-                border: 3px solid $primary-color;
             }
         }
     }
@@ -184,9 +199,8 @@ nav {
 .active {
     @include mq('small') {
         background-color: white;
-        border: 3px solid $primary-color;
-        transition: transform 0.3s;
-        transform: scale(1.2);
+        border: 5px solid $primary-color;
+        transition: all 0.5s;
     }
 }
 
