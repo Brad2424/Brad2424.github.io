@@ -71,10 +71,8 @@ function loop() {
   let _scrollOffset = window.pageYOffset || window.scrollTop;
   _scrollPercent = _scrollOffset/_scrollHeight || 0;
   updateElements();
-  
   requestAnimationFrame(loop);
 }
-
 loop();
 
 window.addEventListener('resize', resize);
