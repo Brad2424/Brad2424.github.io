@@ -177,7 +177,7 @@
     transform: rotate(360deg); } }
 * {
   box-sizing: border-box;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'IBM+Plex+Mono', monospace;
   scroll-behavior: smooth; }
 
 html {
@@ -325,10 +325,6 @@ h2 {
     width: 50px;
     height: 50px; }
 
-.email::before {
-  content: "Email";
-  text-decoration: underline; }
-
 footer {
   background-color: rgba(255, 255, 255, 0.5);
   color: black; }
@@ -379,68 +375,68 @@ header {
 
 .loaded #letter1::before {
   content: 'W';
-  -webkit-animation: letters 4s 0.1s ease-out forwards;
-  animation: letters 4s 0.1s ease-out forwards; }
+  -webkit-animation: letters 3s 0.1s ease-out forwards;
+  animation: letters 3s 0.1s ease-out forwards; }
 
 .loaded #letter2::before {
   content: 'e';
-  -webkit-animation: letters2 4s 0.8s ease-out forwards;
-  animation: letters2 4s 0.8s ease-out forwards; }
+  -webkit-animation: letters2 3s 0.8s ease-out forwards;
+  animation: letters2 3s 0.8s ease-out forwards; }
 
 .loaded #letter3::before {
   content: 'b';
-  -webkit-animation: letters 4s 0.3s ease-out forwards;
-  animation: letters 4s 0.3s ease-out forwards; }
+  -webkit-animation: letters 3s 0.3s ease-out forwards;
+  animation: letters 3s 0.3s ease-out forwards; }
 
 .loaded #letter4::before {
   content: '-';
-  -webkit-animation: letters2 4s 0.7s ease-out forwards;
-  animation: letters2 4s 0.7s ease-out forwards; }
+  -webkit-animation: letters2 3s 0.7s ease-out forwards;
+  animation: letters2 3s 0.7s ease-out forwards; }
 
 .loaded #letter5::before {
   content: 'd';
-  -webkit-animation: letters 4s 0.6s ease-out forwards;
-  animation: letters 4s 0.6s ease-out forwards; }
+  -webkit-animation: letters 3s 0.6s ease-out forwards;
+  animation: letters 3s 0.6s ease-out forwards; }
 
 .loaded #letter6::before {
   content: 'e';
-  -webkit-animation: letters2 4s 0.5s ease-out forwards;
-  animation: letters2 4s 0.5s ease-out forwards; }
+  -webkit-animation: letters2 3s 0.5s ease-out forwards;
+  animation: letters2 3s 0.5s ease-out forwards; }
 
 .loaded #letter7::before {
   content: 'v';
-  -webkit-animation: letters 4s 0.8s ease-out forwards;
-  animation: letters 4s 0.8s ease-out forwards; }
+  -webkit-animation: letters 3s 0.8s ease-out forwards;
+  animation: letters 3s 0.8s ease-out forwards; }
 
 .loaded #letter8::before {
   content: 'e';
-  -webkit-animation: letters2 4s 0.1s ease-out forwards;
-  animation: letters2 4s 0.1s ease-out forwards; }
+  -webkit-animation: letters2 3s 0.1s ease-out forwards;
+  animation: letters2 3s 0.1s ease-out forwards; }
 
 .loaded #letter9::before {
   content: 'l';
-  -webkit-animation: letters 4s 0.7s ease-out forwards;
-  animation: letters 4s 0.7s ease-out forwards; }
+  -webkit-animation: letters 3s 0.7s ease-out forwards;
+  animation: letters 3s 0.7s ease-out forwards; }
 
 .loaded #letter10::before {
   content: 'o';
-  -webkit-animation: letters2 4s 0.2s ease-out forwards;
-  animation: letters2 4s 0.2s ease-out forwards; }
+  -webkit-animation: letters2 3s 0.2s ease-out forwards;
+  animation: letters2 3s 0.2s ease-out forwards; }
 
 .loaded #letter11::before {
   content: 'p';
-  -webkit-animation: letters 4s 0.6s ease-out forwards;
-  animation: letters 4s 0.6s ease-out forwards; }
+  -webkit-animation: letters 3s 0.6s ease-out forwards;
+  animation: letters 3s 0.6s ease-out forwards; }
 
 .loaded #letter12::before {
   content: 'e';
-  -webkit-animation: letters2 4s 0.8s ease-out forwards;
-  animation: letters2 4s 0.8s ease-out forwards; }
+  -webkit-animation: letters2 3s 0.8s ease-out forwards;
+  animation: letters2 3s 0.8s ease-out forwards; }
 
 .loaded #letter13::before {
   content: 'r';
-  -webkit-animation: letters 4s 0.4s ease-out forwards;
-  animation: letters 4s 0.4s ease-out forwards; }
+  -webkit-animation: letters 3s 0.4s ease-out forwards;
+  animation: letters 3s 0.4s ease-out forwards; }
 
 .loaded nav {
   background-color: transparent;
@@ -513,7 +509,7 @@ header {
         display: inline-block;
         padding: 5px 10px;
         color: #998200;
-        width: 89px; } }
+        width: 94px; } }
 
 @media (min-width: 768px) {
   .loaded .active {
@@ -590,6 +586,21 @@ header {
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "directory directory dashboard dashboard gallery gallery" "stylesheet stylesheet stylesheet form form form"; } }
 
+.directory {
+  grid-area: directory; }
+
+.dashboard {
+  grid-area: dashboard; }
+
+.gallery {
+  grid-area: gallery; }
+
+.stylesheet {
+  grid-area: stylesheet; }
+
+.form {
+  grid-area: form; }
+
 .project {
   perspective: 4000px;
   height: 210px;
@@ -599,7 +610,7 @@ header {
     .project {
       height: 240px;
       width: 240px; } }
-  @media (min-width: 1350px) {
+  @media (min-width: 1024px) {
     .project {
       height: 290px;
       width: 290px; } }
@@ -609,7 +620,7 @@ header {
     @media (min-width: 768px) {
       .project h4 {
         font-size: 1.2rem; } }
-    @media (min-width: 1350px) {
+    @media (min-width: 1024px) {
       .project h4 {
         font-size: 1.5rem; } }
   .project h5 {
@@ -618,7 +629,7 @@ header {
     @media (min-width: 768px) {
       .project h5 {
         font-size: 0.8rem; } }
-    @media (min-width: 1350px) {
+    @media (min-width: 1024px) {
       .project h5 {
         font-size: 1rem; } }
   .project p {
@@ -628,7 +639,7 @@ header {
     @media (min-width: 768px) {
       .project p {
         font-size: 0.6rem; } }
-    @media (min-width: 1350px) {
+    @media (min-width: 1024px) {
       .project p {
         font-size: 0.7rem; } }
   .project a {
@@ -639,7 +650,7 @@ header {
     @media (min-width: 768px) {
       .project a {
         font-size: 0.9rem; } }
-    @media (min-width: 1350px) {
+    @media (min-width: 1024px) {
       .project a {
         font-size: 1rem; } }
   .project svg {
@@ -649,7 +660,7 @@ header {
       .project svg {
         width: 30px;
         height: 30px; } }
-    @media (min-width: 1350px) {
+    @media (min-width: 1024px) {
       .project svg {
         width: 40px;
         height: 40px; } }
@@ -659,7 +670,7 @@ header {
     @media (min-width: 768px) {
       .project div.skills {
         font-size: 0.5rem; } }
-    @media (min-width: 1350px) {
+    @media (min-width: 1024px) {
       .project div.skills {
         font-size: 0.6rem; } }
   .project .flex {
@@ -734,7 +745,7 @@ header {
     .bottom {
       height: 240px;
       width: 240px; } }
-  @media (min-width: 1350px) {
+  @media (min-width: 1024px) {
     .front,
     .back,
     .right,
@@ -758,7 +769,7 @@ header {
   @media (min-width: 768px) {
     .front {
       transform: translateZ(120px); } }
-  @media (min-width: 1350px) {
+  @media (min-width: 1024px) {
     .front {
       transform: translateZ(140px); } }
 
@@ -769,7 +780,7 @@ header {
   @media (min-width: 768px) {
     .back {
       transform: rotateY(180deg) translateZ(120px); } }
-  @media (min-width: 1350px) {
+  @media (min-width: 1024px) {
     .back {
       transform: rotateY(180deg) translateZ(140px); } }
 
@@ -783,7 +794,7 @@ header {
   @media (min-width: 768px) {
     .right {
       transform: rotateY(270deg) rotateX(180deg) translate3d(120px, 0, 0); } }
-  @media (min-width: 1350px) {
+  @media (min-width: 1024px) {
     .right {
       transform: rotateY(270deg) rotateX(180deg) translate3d(140px, 0, 0); } }
 
@@ -797,7 +808,7 @@ header {
   @media (min-width: 768px) {
     .left {
       transform: rotateY(-270deg) rotateX(180deg) translate3d(-120px, 0, 0); } }
-  @media (min-width: 1350px) {
+  @media (min-width: 1024px) {
     .left {
       transform: rotateY(-270deg) rotateX(180deg) translate3d(-140px, 0, 0); } }
 
@@ -808,7 +819,7 @@ header {
   @media (min-width: 768px) {
     .top {
       transform: rotateX(90deg) translateZ(120px); } }
-  @media (min-width: 1350px) {
+  @media (min-width: 1024px) {
     .top {
       transform: rotateX(90deg) translateZ(140px); } }
 
@@ -819,24 +830,9 @@ header {
   @media (min-width: 768px) {
     .bottom {
       transform: rotateX(-90deg) translateZ(120px); } }
-  @media (min-width: 1350px) {
+  @media (min-width: 1024px) {
     .bottom {
       transform: rotateX(-90deg) translateZ(140px); } }
-
-.directory {
-  grid-area: directory; }
-
-.dashboard {
-  grid-area: dashboard; }
-
-.gallery {
-  grid-area: gallery; }
-
-.stylesheet {
-  grid-area: stylesheet; }
-
-.form {
-  grid-area: form; }
 
 #preloadWrapper {
   position: fixed;

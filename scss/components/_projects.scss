@@ -51,10 +51,33 @@
     }
 }
 
+// -----------------------------
+// Grid Template Areas ---------
+// -----------------------------
+.directory {
+    grid-area: directory;
+   }
+   
+   .dashboard {
+       grid-area: dashboard;
+   }
+   
+   .gallery {
+       grid-area: gallery;
+   }
+   
+   .stylesheet {
+       grid-area: stylesheet;
+   }
+   
+   .form {
+       grid-area: form;
+   }
 
-// -----------------------------
-// 3d Transforms ---------------
-// -----------------------------
+
+// -------------------------------------------------
+// Project div to conatin cube inside each grid area
+// -------------------------------------------------
 .project {
     perspective: 4000px;
     height: 210px;
@@ -64,7 +87,7 @@
         height: 240px;
         width: 240px;
     }
-    @include mq('large') {
+    @include mq('medium') {
         height: 290px;
         width: 290px;
     }
@@ -74,7 +97,7 @@
         @include mq('small') {
             font-size: 1.2rem;
         }
-        @include mq('large') {
+        @include mq('medium') {
             font-size: 1.5rem;
         }
     }
@@ -84,7 +107,7 @@
         @include mq('small') {
             font-size: 0.8rem;
         }
-        @include mq('large') {
+        @include mq('medium') {
             font-size: 1rem;
         }
     }
@@ -95,7 +118,7 @@
         @include mq('small') {
             font-size: 0.6rem;
         }
-        @include mq('large') {
+        @include mq('medium') {
             font-size: 0.7rem;
         }
     }
@@ -107,7 +130,7 @@
         @include mq('small') {
             font-size: 0.9rem;
         }
-        @include mq('large') {
+        @include mq('medium') {
             font-size: 1rem;
         }
     }
@@ -118,7 +141,7 @@
             width: 30px;
             height: 30px;
         }
-        @include mq('large') {
+        @include mq('medium') {
             width: 40px;
             height: 40px;
         }
@@ -129,7 +152,7 @@
         @include mq('small') {
             font-size: 0.5rem;
         }
-        @include mq('large') {
+        @include mq('medium') {
             font-size: 0.6rem;
         }
     }
@@ -146,6 +169,10 @@
     align-items: center;
     flex: 1;
 }
+
+// -------------------------------------------------
+// Actual cubes inside each project container
+// -------------------------------------------------
 
 // left-hand side cubes
 .directory .cube, .stylesheet .cube {
@@ -207,6 +234,9 @@
     }
 }
 
+// -------------------------------------------------
+// Cube faces
+// -------------------------------------------------
 .front,
 .back,
 .right,
@@ -222,7 +252,7 @@
         height: 240px;
         width: 240px;
     }
-    @include mq('large') {
+    @include mq('medium') {
         height: 280px;
         width: 280px;
     }
@@ -233,37 +263,37 @@
 }
 
 .front {
-    transform: translateZ(100px);
+    transform: translateZ(100px); //All translateZ is half of cube size
     border: none;
     @include mq('small') {
         transform: translateZ(120px);
     }
-    @include mq('large') {
+    @include mq('medium') {
         transform: translateZ(140px);
     }
 }
 .back {
     position: absolute;
     top: 0;
-    transform: rotateY(180deg) translateZ(100px);
+    transform: rotateY(180deg) translateZ(100px); //All translateZ is half of cube size
     @include mq('small') {
         transform: rotateY(180deg) translateZ(120px);
     }
-    @include mq('large') {
+    @include mq('medium') {
         transform: rotateY(180deg) translateZ(140px);
     }
 }
 .right {
     position: absolute;
     top: 0;
-	transform: rotateY(270deg) rotateX(180deg) translate3d(100px, 0, 0);
+	transform: rotateY(270deg) rotateX(180deg) translate3d(100px, 0, 0); //All translateZ is half of cube size
     transform-origin: right;
     padding: 10px; // padding for the informtion about project //
     color: white;
     @include mq('small') {
         transform: rotateY(270deg) rotateX(180deg) translate3d(120px, 0, 0);
     }
-    @include mq('large') {
+    @include mq('medium') {
         transform: rotateY(270deg) rotateX(180deg) translate3d(140px, 0, 0);
     }
 }
@@ -271,14 +301,14 @@
 .left {
     position: absolute;
     top: 0;
-	transform: rotateY(-270deg) rotateX(180deg) translate3d(-100px, 0, 0);
+	transform: rotateY(-270deg) rotateX(180deg) translate3d(-100px, 0, 0); //All translateZ is half of cube size
     transform-origin: left;
-    padding: 10px; // padding for the informtion about project //
+    padding: 10px; // padding needed for the informtion about project //
     color: white;
     @include mq('small') {
         transform: rotateY(-270deg) rotateX(180deg) translate3d(-120px, 0, 0);
     }
-    @include mq('large') {
+    @include mq('medium') {
         transform: rotateY(-270deg) rotateX(180deg) translate3d(-140px, 0, 0);
     }
 }
@@ -286,47 +316,22 @@
 .top {
     position: absolute;
     top: 0;
-    transform: rotateX(90deg) translateZ(100px);
+    transform: rotateX(90deg) translateZ(100px); //All translateZ is half of cube size
     @include mq('small') {
         transform: rotateX(90deg) translateZ(120px);
     }
-    @include mq('large') {
+    @include mq('medium') {
         transform: rotateX(90deg) translateZ(140px);
     }
 }
 .bottom {
     position: absolute;
     top: 0;
-    transform: rotateX(-90deg) translateZ(100px);
+    transform: rotateX(-90deg) translateZ(100px); //All translateZ is half of cube size
     @include mq('small') {
         transform: rotateX(-90deg) translateZ(120px);
     }
-    @include mq('large') {
+    @include mq('medium') {
         transform: rotateX(-90deg) translateZ(140px);
     }
-}
-
-
-// -----------------------------
-// Grid Template Areas ---------
-// -----------------------------
-
-.directory {
- grid-area: directory;
-}
-
-.dashboard {
-    grid-area: dashboard;
-}
-
-.gallery {
-    grid-area: gallery;
-}
-
-.stylesheet {
-    grid-area: stylesheet;
-}
-
-.form {
-    grid-area: form;
 }
