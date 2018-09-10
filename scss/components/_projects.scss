@@ -1,12 +1,12 @@
 #projects {
-    background-image: url('../images/section-images/Back_color.jpg');
+    background-image: url('../images/section-images/Back_color_minus60_plus30.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
     h3 {
         background-color: rgb(62, 71, 80);
         border-radius: 100px; 
-        color: white;
+        color: $primary-font-color;
         padding: 10px;
         display: inline-block;
         margin: 0 auto;
@@ -16,7 +16,7 @@
             font-size: 1rem;
         }
         a{ //Treehouse link
-            color: white;
+            color: $primary-font-color;
             font-size: 1rem;
             @include mq('small') {
                 font-size: 1.3rem;
@@ -123,7 +123,7 @@
         }
     }
     a {
-        color: white;
+        color: $primary-font-color;
         display: inline-block;
         margin: 5px;
         font-size: 0.8rem;
@@ -243,11 +243,12 @@
 .left,
 .top,
 .bottom {
-    background-color: $primary-color-faded;
+    background-color: rgba(160, 130, 60, 0.9); //primary-color faded
     height: 200px;
     width: 200px;
     backface-visibility: hidden;
-    border: 2px solid rgba(255, 255, 255, 0.7);
+    border: 1px solid $primary-font-color;
+    color: $primary-font-color;
     @include mq('small') {
         height: 240px;
         width: 240px;
@@ -289,7 +290,6 @@
 	transform: rotateY(270deg) rotateX(180deg) translate3d(100px, 0, 0); //All translateZ is half of cube size
     transform-origin: right;
     padding: 10px; // padding for the informtion about project //
-    color: white;
     @include mq('small') {
         transform: rotateY(270deg) rotateX(180deg) translate3d(120px, 0, 0);
     }
@@ -304,7 +304,6 @@
 	transform: rotateY(-270deg) rotateX(180deg) translate3d(-100px, 0, 0); //All translateZ is half of cube size
     transform-origin: left;
     padding: 10px; // padding needed for the informtion about project //
-    color: white;
     @include mq('small') {
         transform: rotateY(-270deg) rotateX(180deg) translate3d(-120px, 0, 0);
     }

@@ -1,39 +1,20 @@
 #aboutMe {
     background-image: url('../images/section-images/IMG_1903.JPG');
     background-size: cover;
-    color: white;
+    color: $primary-font-color;
     padding-bottom: 20px;
     .container {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 90%;
-        margin: 10px auto;
-        @include mq('small') {
-            flex-direction: row;
-            margin: 0 auto;
-        }
+        margin: 0px auto;
         @include mq('medium') {
+            flex-direction: row;
+        }
+        @include mq('large') {
             width: 80%;
             margin-bottom: 40px;
-        }
-    }
-    img {
-        background: white;
-        order: 1;
-        border-radius: 50%;
-        border: solid 1px white;
-        height: 200px;
-        width: 200px;
-        display: block;
-        margin: auto; 
-        flex: 1;
-        margin-bottom: 20px;
-        @include mq('small') {
-            order: unset;
-            height: 240px;
-            width: 240px;
-            margin: 20px;
         }
     }
 }
@@ -43,22 +24,39 @@
 .profile-picture {
     opacity: 0;
     transition: all 1s;
+    background: white;
+    border-radius: 50%;
+    border: solid 1px $primary-font-color;
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin: 0 0 10px 10px;
     @include mq('small') {
+        height: 240px;
+        width: 240px;
         transform: translateX(100%);
+    }
+    @include mq('medium') {
+        min-height: 280px;
+        min-width: 280px;
+        order: 2;
     }
 }
 .introduction {
     padding: 15px;
-    order: 2;
-    flex: 2;
-    background-color: $primary-color-faded;
-    border: 1px solid white;
+    background-color: rgba(140, 120, 40, 0.9); //secondary-color faded
+    border: 2px solid $primary-font-color;
     border-radius: 10px;
     opacity: 0;
     transition: all 1s;
     @include mq('small') {
-        order: unset;
         transform: translateX(-100%);
+    }
+    @include mq('medium') {
+        order: 1;
+    }
+    h3 {
+        margin: 0.5em;
     }
     //these spans are the skills
     span {
@@ -67,15 +65,15 @@
     }
     p {
         font-family: 'Montserrat', sans-serif;
-        margin: 0;
         padding: 0px;
+        margin-top: 0px;
         @include mq('small') {
         text-align: left;
         }
     }
     a {
         font-family: 'Montserrat', sans-serif;
-        color: white;
+        color: $primary-font-color;
     }
 }
 //active styling for the above fade-in elements

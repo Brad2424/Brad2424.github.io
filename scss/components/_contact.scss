@@ -1,6 +1,6 @@
 #contact {
-    background-color: rgba(1,1,1,0.5);
-    color: white;
+    background-color: rgba(60, 60, 60, 0.3); //$primary-font-color faded
+    color: $primary-font-color;
     padding-bottom: 10px;
     .flex {
         display: flex;
@@ -16,7 +16,7 @@
     a {
         padding-right: 10px;
         margin: 10px 0;
-        color: white;
+        color: $primary-font-color;
     }
     p {
         text-align: center;
