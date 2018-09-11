@@ -111,7 +111,7 @@ header {
 // Navbar
 // --------------------------
 .loaded nav {
-    margin: 10px 0;
+    margin: 15px 0;
     background-color: transparent;
     display: flex;
     flex-direction: column;
@@ -123,7 +123,6 @@ header {
     @include mq('small') {
         flex-direction: row;
         position: fixed;
-        margin: 15px 0;
     }
 
     // My name at top of page 

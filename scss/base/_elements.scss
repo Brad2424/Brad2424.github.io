@@ -29,8 +29,15 @@ h2 {
     font-size: 2.5rem;
     margin: 20px;
     padding: 5px 10px;
-    display: inline-block;
+    display: block;
     @include mq('small') {
         font-size: 4rem;
     }
+}
+
+// class below is to center align all links on page with svg's //
+.flex-svg-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -24,6 +24,7 @@
         }
     }
     .grid {
+        margin-top: 50px;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 1fr);
@@ -80,17 +81,18 @@
 // -------------------------------------------------
 .project {
     perspective: 4000px;
-    height: 210px;
-    width: 210px;
-    margin: 50px auto 70px auto;
+    margin: 0 auto 80px auto;
     @include mq('small') {
-        height: 240px;
-        width: 240px;
+        margin: 0 auto 100px auto;
     }
     @include mq('medium') {
-        height: 290px;
-        width: 290px;
+        margin: 0 auto 110px auto;
     }
+}
+// -------------------------------------------------
+// Actual cubes inside each project container
+// -------------------------------------------------
+.cube {
     h4 {
         margin: 0;
         font-size: 1rem;
@@ -107,19 +109,22 @@
         @include mq('small') {
             font-size: 0.8rem;
         }
-        @include mq('medium') {
-            font-size: 1rem;
-        }
     }
-    p{
-        margin: 10px 0 0 0;
-        font-size: 0.5rem;
-        font-family: 'Montserrat', sans-serif;
-        @include mq('small') {
-            font-size: 0.6rem;
-        }
-        @include mq('medium') {
-            font-size: 0.7rem;
+    .description {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+            margin: auto 0;
+            font-size: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+            @include mq('small') {
+                font-size: 0.6rem;
+            }
+            @include mq('medium') {
+                font-size: 0.7rem;
+            }
         }
     }
     a {
@@ -156,23 +161,7 @@
             font-size: 0.6rem;
         }
     }
-    // class below is to center align all information in cube //
-    .flex {
-        display: flex;
-        flex-direction: column;
-    }
 }
-// class below is to center align links with svg's //
-.flex-svg-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-}
-
-// -------------------------------------------------
-// Actual cubes inside each project container
-// -------------------------------------------------
 
 // left-hand side cubes
 .directory .cube, .stylesheet .cube {
@@ -243,12 +232,15 @@
 .left,
 .top,
 .bottom {
-    background-color: rgba(160, 130, 60, 0.9); //primary-color faded
+    background-color: rgba(150, 115, 50, 0.9); //primary-color faded
     height: 200px;
     width: 200px;
     backface-visibility: hidden;
-    border: 1px solid $primary-font-color;
+    border: 2px solid $primary-font-color;
     color: $primary-font-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @include mq('small') {
         height: 240px;
         width: 240px;

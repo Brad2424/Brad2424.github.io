@@ -44,8 +44,8 @@
 }
 .introduction {
     padding: 15px;
-    background-color: rgba(140, 120, 40, 0.9); //secondary-color faded
-    border: 2px solid $primary-font-color;
+    background-color: rgba(150, 115, 50, 0.9); //primary-color faded
+    border: 1px solid $primary-font-color;
     border-radius: 10px;
     opacity: 0;
     transition: all 1s;
@@ -56,7 +56,9 @@
         order: 1;
     }
     h3 {
+        font-size: 1.5rem;
         margin: 0.5em;
+        text-decoration: underline;
     }
     //these spans are the skills
     span {
@@ -67,9 +69,6 @@
         font-family: 'Montserrat', sans-serif;
         padding: 0px;
         margin-top: 0px;
-        @include mq('small') {
-        text-align: left;
-        }
     }
     a {
         font-family: 'Montserrat', sans-serif;
