@@ -89,142 +89,9 @@
         margin: 0 auto 110px auto;
     }
 }
-// -------------------------------------------------
-// Actual cubes inside each project container
-// -------------------------------------------------
-.cube {
-    h4 {
-        margin: 0;
-        font-size: 1rem;
-        @include mq('small') {
-            font-size: 1.2rem;
-        }
-        @include mq('medium') {
-            font-size: 1.5rem;
-        }
-    }
-    h5 {
-        margin: 0;
-        font-size: 0.7rem;
-        @include mq('small') {
-            font-size: 0.8rem;
-        }
-    }
-    .description {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        p {
-            margin: auto 0;
-            font-size: 0.5rem;
-            font-family: 'Montserrat', sans-serif;
-            @include mq('small') {
-                font-size: 0.6rem;
-            }
-            @include mq('medium') {
-                font-size: 0.7rem;
-            }
-        }
-    }
-    a {
-        color: $primary-font-color;
-        display: inline-block;
-        margin: 5px;
-        font-size: 0.8rem;
-        @include mq('small') {
-            font-size: 0.9rem;
-        }
-        @include mq('medium') {
-            font-size: 1rem;
-        }
-    }
-    svg {
-        width: 20px;
-        height: 20px;
-        @include mq('small') {
-            width: 30px;
-            height: 30px;
-        }
-        @include mq('medium') {
-            width: 40px;
-            height: 40px;
-        }
-    }
-    div.skills {
-        font-size: 0.4rem;
-        margin-top: 5px;
-        @include mq('small') {
-            font-size: 0.5rem;
-        }
-        @include mq('medium') {
-            font-size: 0.6rem;
-        }
-    }
-}
-
-// left-hand side cubes
-.directory .cube, .stylesheet .cube {
-    transform-style: preserve-3d;
-    animation: leftReverse 0.4s ease-in-out forwards;
-    .back {
-        box-shadow: 20px 10px 40px 10px rgba(0,0,0,.6);
-    }
-    .bottom {
-        border-left: none;
-    }
-    &:hover {
-        animation: leftSpin 0.4s ease-in-out forwards;
-        .back {
-            box-shadow: none;
-        }
-    }
-}
-
-// right-hand side cubes
-.gallery .cube, .form .cube {
-    transform-style: preserve-3d;
-    animation: rightReverse 0.4s ease-in-out forwards;
-    .back {
-        box-shadow: -20px 10px 40px 10px rgba(0,0,0,.6);
-    }
-    .bottom {
-        border-right: none;
-    }
-    &:hover {
-        animation: rightSpin 0.4s ease-in-out forwards;
-        .back {
-            box-shadow: none;
-        }
-    }
-}
-
-// center cubes
-.dashboard .cube {
-    transform-style: preserve-3d;
-    animation: rightReverse 0.4s ease-in-out forwards;
-    @include mq('large') {
-        animation: centerReverse 0.4s ease-in-out forwards;
-    }
-    .back {
-        box-shadow: -20px 10px 40px 10px rgba(0,0,0,.6);
-    }
-    .bottom {
-        border-right: none;
-    }
-    &:hover {
-        animation: rightSpin 0.4s ease-in-out forwards;
-        @include mq('large') {
-            animation: centerSpin 0.4s ease-in-out forwards;
-        }
-        .back {
-            box-shadow: none;
-        }
-    }
-}
 
 // -------------------------------------------------
-// Cube faces
+// Positioning of each cube face / Making the cube
 // -------------------------------------------------
 .front,
 .back,
@@ -240,7 +107,6 @@
     color: $primary-font-color;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     @include mq('small') {
         height: 240px;
         width: 240px;
@@ -324,5 +190,143 @@
     }
     @include mq('medium') {
         transform: rotateX(-90deg) translateZ(140px);
+    }
+}
+
+// -------------------------------------------------
+// Syling of all the elements inside each cube
+// -------------------------------------------------
+.cube {
+    h4 {
+        margin: 0;
+        font-size: 1rem;
+        @include mq('small') {
+            font-size: 1.2rem;
+        }
+        @include mq('medium') {
+            font-size: 1.5rem;
+        }
+    }
+    h5 {
+        margin: 0;
+        font-size: 0.7rem;
+        @include mq('small') {
+            font-size: 0.8rem;
+        }
+    }
+    .description {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+            margin: auto 0;
+            font-size: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+            @include mq('small') {
+                font-size: 0.6rem;
+            }
+            @include mq('medium') {
+                font-size: 0.7rem;
+            }
+        }
+    }
+    a {
+        color: $primary-font-color;
+        display: inline-block;
+        margin: 5px;
+        font-size: 0.7rem;
+        @include mq('small') {
+            font-size: 0.9rem;
+        }
+        @include mq('medium') {
+            font-size: 1rem;
+        }
+    }
+    svg {
+        width: 20px;
+        height: 20px;
+        @include mq('small') {
+            width: 30px;
+            height: 30px;
+        }
+        @include mq('medium') {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    div.skills {
+        font-size: 0.5rem;
+        margin: 1px;
+        @include mq('small') {
+            font-size: 0.5rem;
+        }
+        @include mq('medium') {
+            font-size: 0.6rem;
+        }
+    }
+}
+
+// ---------------------------------------------------------------
+// Animation for each cube depending on which side it is in layout
+// ---------------------------------------------------------------
+
+// left-hand side cubes
+.directory .cube, .stylesheet .cube {
+    transform-style: preserve-3d;
+    animation: leftReverse 0.4s ease-in-out forwards;
+    .back {
+        box-shadow: 20px 10px 40px 10px rgba(0,0,0,.6);
+    }
+    .bottom {
+        border-left: none;
+    }
+    &:hover {
+        animation: leftSpin 0.4s ease-in-out forwards;
+        .back {
+            box-shadow: none;
+        }
+    }
+}
+
+// right-hand side cubes
+.gallery .cube, .form .cube {
+    transform-style: preserve-3d;
+    animation: rightReverse 0.4s ease-in-out forwards;
+    .back {
+        box-shadow: -20px 10px 40px 10px rgba(0,0,0,.6);
+    }
+    .bottom {
+        border-right: none;
+    }
+    &:hover {
+        animation: rightSpin 0.4s ease-in-out forwards;
+        .back {
+            box-shadow: none;
+        }
+    }
+}
+
+// center cubes
+.dashboard .cube {
+    transform-style: preserve-3d;
+    animation: rightReverse 0.4s ease-in-out forwards;
+    @include mq('large') {
+        animation: centerReverse 0.4s ease-in-out forwards;
+    }
+    .back {
+        box-shadow: -20px 10px 40px 10px rgba(0,0,0,.6);
+    }
+    .bottom {
+        border-right: none;
+    }
+    &:hover {
+        animation: rightSpin 0.4s ease-in-out forwards;
+        @include mq('large') {
+            animation: centerSpin 0.4s ease-in-out forwards;
+        }
+        .back {
+            box-shadow: none;
+        }
     }
 }

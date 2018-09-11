@@ -18,9 +18,9 @@
         }
     }
 }
-// -----------------------------
-// Javascript fade-in elements
-// -----------------------------
+// --------------------------------------------
+// Javascript fade-in elements inside container
+// --------------------------------------------
 .profile-picture {
     opacity: 0;
     transition: all 1s;
@@ -29,7 +29,6 @@
     border: solid 1px $primary-font-color;
     height: 200px;
     width: 200px;
-    display: block;
     margin: 0 0 10px 10px;
     @include mq('small') {
         height: 240px;
@@ -43,12 +42,12 @@
     }
 }
 .introduction {
+    opacity: 0;
+    transition: all 1s;
     padding: 15px;
     background-color: rgba(150, 115, 50, 0.9); //primary-color faded
     border: 1px solid $primary-font-color;
     border-radius: 10px;
-    opacity: 0;
-    transition: all 1s;
     @include mq('small') {
         transform: translateX(-100%);
     }
@@ -56,12 +55,13 @@
         order: 1;
     }
     h3 {
-        font-size: 1.5rem;
-        margin: 0.5em;
+        margin: 8px;
         text-decoration: underline;
+        @include mq('small') {
+            font-size: 1.5rem;
+        }
     }
-    //these spans are the skills
-    span {
+    span { //skills
         padding: 7px;
         margin-top: 5px;
     }
@@ -75,8 +75,8 @@
         color: $primary-font-color;
     }
 }
-//active styling for the above fade-in elements
-.active-fade-in {
+
+.active-fade-in {//active class added for scroll fade-in
     opacity: 1;
     transform: translateX(0);
 }

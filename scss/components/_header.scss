@@ -8,19 +8,18 @@ header {
     display: flex;
     flex-direction: column;
     @include mq('small') {
-        height: $section-height-lrg;
+        height: calc(#{$section-height} * 1.5);
     }
     h1 {
         padding: 10px;
-        z-index: 2;
         color: $secondary-color;
         border-top: 2px solid $secondary-color;
         border-bottom: 2px solid $secondary-color;
         font-size: 2rem;
         font-weight: bold;
         background-color: rgba(240, 240, 240, 0.7); //$primary-font-color faded
-        width: 100%;
         text-transform: uppercase;
+        z-index: 1; // to bring in front of the moving images
         @include mq('small') {
             padding: 5px;
             margin-top: 250px;
@@ -30,9 +29,8 @@ header {
             font-size: 6rem;
         }
     }
-    //html symbols in heading
+    //html entities in heading
     .unicode {
-        display: inline-block;
         font-size: 2rem;
         color: $primary-color;
         margin: 0 5px;
@@ -41,6 +39,10 @@ header {
         }
     }
 }
+
+// ---------------------------------
+// Animations for each letter in h1
+// ---------------------------------
 .loaded #letter1::before {
     content: 'W';
     -webkit-animation: letters 3s 0.1s ease-out forwards;
@@ -111,30 +113,28 @@ header {
 // Navbar
 // --------------------------
 .loaded nav {
+    font-size: 1.2rem;
     margin: 15px 0;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     color: $primary-font-color;
     width: 100%;
     max-width: $body-max-width;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     z-index: 1000;
     @include mq('small') {
         flex-direction: row;
         position: fixed;
     }
 
-    // My name at top of page 
+    // My name at top of page in Nav
     span {
-        color: $primary-font-color;
         border-top: 1px solid $primary-font-color; 
         border-bottom: 1px solid $primary-font-color; 
         text-transform: uppercase;
         font-weight: bold;
-        padding: 10px;
+        padding: 5px;
         margin-bottom: 10px;
-        font-size: 1.2rem;
         position: relative;
         top: -60px;
         animation: dropdown 1s 0.5s ease-out forwards;
@@ -185,7 +185,6 @@ header {
         text-decoration: none;
         color: $primary-font-color;
         display: block;
-        font-size: 1.2rem;
         background-color: $primary-color;
         border: 1px solid $primary-font-color;
         @include mq('small') {
@@ -211,25 +210,23 @@ header {
     overflow: hidden;
     width: 100%;
     max-width: #{$body-max-width};
-    z-index: 1;
     display: flex;
     position: absolute;
     height: $section-height;
         @include mq('small') {
-        height: $section-height-lrg;
+        height: calc(#{$section-height} * 1.5);
     }
-    div.img {
-        &1 {
+    div.img1, div.img2 {
             width: 50%;
             max-width: calc(#{$body-max-width} * 0.5);
             position: relative;
+    }
+    div.img {
+        &1 {
             left: 10%;
             animation: fade-in 0.25s ease-out forwards;
         }
         &2 {
-            width: 50%;
-            max-width: calc(#{$body-max-width} * 0.5);
-            position: relative;
             right: 10%;
             animation: fade-in 0.5s ease-out forwards;
         }

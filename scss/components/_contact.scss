@@ -2,7 +2,7 @@
     background-color: rgba(190, 190, 190, 0.2);
     color: $primary-font-color;
     padding-bottom: 10px;
-    .flex {
+    .flex-container {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -17,9 +17,6 @@
         padding-right: 10px;
         margin: 10px 0;
         color: $primary-font-color;
-    }
-    p {
-        text-align: center;
     }
     svg {
         width: 50px;

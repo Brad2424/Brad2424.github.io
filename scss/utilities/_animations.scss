@@ -77,9 +77,9 @@
     }
 }
 
-// -----------------------------
-// 0 and 1 For Letters in Header
-// -----------------------------
+// ---------------------------------
+// 0's and 1's For Letters in Header
+// ---------------------------------
 @-webkit-keyframes letters {
     0% {
         -webkit-content: '0';
@@ -210,9 +210,9 @@
     }
 }
 
-// -----------------------------
-// Name and NavBar in Header
-// -----------------------------
+// -----------------------------------
+// Name and NavBar dropdown in Header
+// -----------------------------------
 @keyframes dropdown {
     25% {
         transform: translateY(-55px);
@@ -228,9 +228,9 @@
     }
 }
 
-// -----------------------------
-// images in Header
-// -----------------------------
+// ------------------------------------
+// initial fade-in for images in header
+// ------------------------------------
 @keyframes fade-in {
     0% {
         opacity: 0;
