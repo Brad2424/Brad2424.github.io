@@ -111,6 +111,10 @@
     @extend %skill;
     background-color: rgb(1, 105, 91);
 }
+.bootstrap {
+    @extend %skill;
+    background-color: rgb(48, 52, 105);
+}
 .git {
     @extend %skill;
     background-color: rgb(0, 0, 0);

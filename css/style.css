@@ -1,4 +1,4 @@
-.html, .css, .javascript, .ajax, .jquery, .sass, .git, .json, .svg {
+.html, .css, .javascript, .ajax, .jquery, .sass, .bootstrap, .git, .json, .svg {
   padding: 5px;
   margin: 1px;
   border-radius: 100px;
@@ -302,6 +302,9 @@ h2 {
 
 .sass {
   background-color: #01695b; }
+
+.bootstrap {
+  background-color: #303469; }
 
 .git {
   background-color: black; }
