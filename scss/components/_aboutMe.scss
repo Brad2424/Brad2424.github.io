@@ -24,7 +24,6 @@
 .profile-picture {
     opacity: 0;
     transition: all 1s;
-    background: white;
     border-radius: 50%;
     border: solid 1px $primary-font-color;
     height: 200px;
@@ -36,9 +35,13 @@
         transform: translateX(100%);
     }
     @include mq('medium') {
-        min-height: 280px;
-        min-width: 280px;
+        min-height: 300px;
+        min-width: 300px;
         order: 2;
+    } 
+    @include mq('large') {
+        min-height: 350px;
+        min-width: 350px;
     }
 }
 .introduction {

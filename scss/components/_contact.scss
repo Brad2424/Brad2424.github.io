@@ -1,8 +1,10 @@
 #contact {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(85, 85, 85, 0.4);
     color: $primary-font-color;
     padding-bottom: 10px;
-    font-size: 1.3rem;
+    * {
+        font-family: 'Montserrat', sans-serif;
+    }
     .flex-container {
         display: flex;
         justify-content: center;
