@@ -210,24 +210,6 @@
     }
 }
 
-// -----------------------------------
-// Name and NavBar dropdown in Header
-// -----------------------------------
-@keyframes dropdown {
-    25% {
-        transform: translateY(-55px);
-    }
-    50% {
-        transform: translateY(80px);
-    }
-    75% {
-        transform: translateY(45px);
-    }
-    100% {
-        transform: translateY(55px); 
-    }
-}
-
 // ------------------------------------
 // initial fade-in for images in header
 // ------------------------------------

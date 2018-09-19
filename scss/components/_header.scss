@@ -112,7 +112,7 @@ header {
 // --------------------------
 // Navbar
 // --------------------------
-.loaded nav {
+nav {
     font-size: 1.2rem;
     margin: 15px 0;
     color: $primary-font-color;
@@ -129,15 +129,12 @@ header {
 
     // My name at top of page in Nav
     span {
-        border-top: 1px solid $primary-font-color; 
-        border-bottom: 1px solid $primary-font-color; 
+        border-top: 2px solid $primary-font-color; 
+        border-bottom: 2px solid $primary-font-color; 
         text-transform: uppercase;
         font-weight: bold;
         padding: 5px;
         margin-bottom: 10px;
-        position: relative;
-        top: -60px;
-        animation: dropdown 1s 0.5s ease-out forwards;
         @include mq('small') {
             margin-left: $edgeGap;
             margin-bottom: 0px;
@@ -149,8 +146,6 @@ header {
         margin: 0;
         width: 90%;
         @include mq('small') {
-            position: relative;
-            top: -60px;
             margin-right: $edgeGap;
             margin-left: auto;
             width: initial;
@@ -162,18 +157,6 @@ header {
             margin: 0px;
             display: inline-block;
             border: 2px solid transparent;
-            &:nth-of-type(1) {
-                animation: dropdown 1s 0.5s ease-out forwards;
-            }
-            &:nth-of-type(2) {
-                animation: dropdown 1s 0.8s ease-out forwards;
-            }
-            &:nth-of-type(3) {
-                animation: dropdown 1s 1.1s ease-out forwards;
-            }
-            &:nth-of-type(4) {
-                animation: dropdown 1s 1.4s ease-out forwards;
-            }
             &:hover {
                 font-weight: bold;
                 border: 2px solid $primary-font-color;
@@ -224,11 +207,11 @@ header {
     div.img {
         &1 {
             left: 10%;
-            animation: fade-in 0.25s ease-out forwards;
+            animation: fade-in 0.5s ease-out forwards;
         }
         &2 {
             right: 10%;
-            animation: fade-in 0.5s ease-out forwards;
+            animation: fade-in 1s ease-out forwards;
         }
     }
     img {
