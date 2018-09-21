@@ -1,3 +1,5 @@
+<?php include 'form_submit.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -293,24 +295,29 @@
                     <h2>Contact Me</h2>
                     <h3>Email</h3>
                     <div class="container_form">
-                        <form action="index.html" method="POST">
+                        <form action="<?php echo htmlspecialchars('index.php#contact');?>" method="POST">
                             <div>
                                 <label for="name">Your Name:</label>
-                                <input type="text" id="name" placeholder="Required" name="name">
+                                <input type="text" id="name" placeholder="Required" name="name" value="<?php echo $name;?>">
+                                <span class="error"><?php echo $nameErr;?></span>
                             </div>
                             <div>
                                 <label for="email">Your Email:</label>
-                                <input type="email" id="email" placeholder="Required" name="email">
+                                <input type="email" id="email" placeholder="Required" name="email" value="<?php echo $email;?>">
+                                <span class="error"><?php echo $emailErr;?></span>
                             </div>
                             <div>
                                 <label for="phone">Your Phone(optional):</label>
                                 <input type="tel" id="phone" name="phone">
+                                
                             </div>
                             <div>
                                 <label for="message">Message</label>
-                                <textarea name="message" id="message" placeholder="Required"></textarea>
+                                <textarea name="message" id="message" placeholder="Required" value="<?php echo $message;?>"></textarea>
+                                <span class="error"><?php echo $messageErr;?></span>
                             </div>
-                            <button type="submit">Send</button>
+                            <button type="submit" name="send_msg">Send</button>
+                            <div class="success"><?= $success?></div>
                         </form>
                     </div>
                        
