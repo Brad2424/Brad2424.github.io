@@ -50,18 +50,11 @@
     padding: 15px;
     background-color: rgba(150, 115, 50, 0.9); //primary-color faded
     border: 1px solid $primary-font-color;
-    border-radius: 10px;
     @include mq('small') {
         transform: translateX(-100%);
     }
     @include mq('medium') {
         order: 1;
-    }
-    h3 {
-        margin: 8px;
-        @include mq('small') {
-            font-size: 1.5rem;
-        }
     }
     span { //skills
         padding: 7px;

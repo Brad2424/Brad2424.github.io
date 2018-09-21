@@ -4,22 +4,10 @@
     background-size: 100% 100%;
     background-attachment: fixed;
     h3 {
-        background-color: rgb(62, 71, 80);
-        border-radius: 100px; 
-        color: $primary-font-color;
-        padding: 10px;
-        display: inline-block;
-        margin: 0 auto;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 0.8rem;
-        @include mq('small') {
-            font-size: 1rem;
-        }
-        a{ //Treehouse link
-            color: $primary-font-color;
-            font-size: 1rem;
+        background-color: rgba(150, 115, 50, 0.9); //primary-color faded
+        a { //Treehouse link
             @include mq('small') {
-                font-size: 1.3rem;
+                font-size: 1.5rem;
             }
         }
     }
@@ -232,7 +220,6 @@
         }
     }
     a {
-        color: $primary-font-color;
         display: inline-block;
         margin: 5px;
         font-size: 0.7rem;

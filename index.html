@@ -63,16 +63,18 @@
                         <p>My current goal is to become an all-round competent full-stack developer in 2019.<br/>
                         To do this, I plan on expanding my JavaScript skills into NodeJS and React through the Treehouse Full-stack JavaScript course, as well as familiarizing myself further with WordPress PHP and MySQL functionality. I'm also interested in mobile development(there is so much I want to learn!). I really love coding and as a self-taught coder, I thrive on expanding my skills each and every day.</p>
                         <h3>Programming Skills</h3>
-                        <span class="html">HTML</span>
-                        <span class="css">CSS</span>
-                        <span class="sass">SASS</span>
-                        <span class="bootstrap">Bootstrap</span>
-                        <span class="javascript">JavaScript</span>
-                        <span class="jquery">jQuery</span>
-                        <span class="ajax">AJAX</span>
-                        <span class="json">JSON</span> 
-                        <span class="svg">SVG</span>
-                        <span class="git">git</span>
+                        <div class="container_skills">
+                            <span class="html">HTML</span>
+                            <span class="css">CSS</span>
+                            <span class="sass">SASS</span>
+                            <span class="bootstrap">Bootstrap</span>
+                            <span class="javascript">JavaScript</span>
+                            <span class="jquery">jQuery</span>
+                            <span class="ajax">AJAX</span>
+                            <span class="json">JSON</span> 
+                            <span class="svg">SVG</span>
+                            <span class="git">git</span>
+                        </div>
                     </article>
                 </div>
             </section>
@@ -289,7 +291,31 @@
 <!-- Contact Section -->   
                 <section id = "contact">
                     <h2>Contact Me</h2>
-                    <p class="email"><a href="mailto:bradleymurchison@gmail.com">Email:</a>bradleymurchison@gmail.com</p>
+                    <h3>Email</h3>
+                    <div class="container_form">
+                        <form action="index.html" method="POST">
+                            <div>
+                                <label for="name">Your Name:</label>
+                                <input type="text" id="name" placeholder="Required" name="name">
+                            </div>
+                            <div>
+                                <label for="email">Your Email:</label>
+                                <input type="email" id="email" placeholder="Required" name="email">
+                            </div>
+                            <div>
+                                <label for="phone">Your Phone(optional):</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div>
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" placeholder="Required"></textarea>
+                            </div>
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+                       
+
+                    <h3>Other</h3>
                     <div class="flex-container">
                         <!-- facebook Icon -->
                         <div class="flex-contact-links">

@@ -15,11 +15,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    a {
-        padding-right: 10px;
-        margin: 10px 0;
-        color: $primary-font-color;
+        margin: 0 20px;
+        a {
+            margin: 5px;
+        }
     }
     svg {
         width: 50px;
